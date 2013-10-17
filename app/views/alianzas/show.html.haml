@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Nombre:
+  = @alianza.nombre
+
+= link_to 'Edit', edit_alianza_path(@alianza)
+\|
+= link_to 'Back', alianzas_path

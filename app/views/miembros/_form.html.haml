@@ -1,0 +1,19 @@
+= form_for @miembro do |f|
+  - if @miembro.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@miembro.errors.count, "error")} prohibited this miembro from being saved:"
+      %ul
+        - @miembro.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :nombre
+    = f.text_field :nombre
+  .field
+    = f.label :puesto
+    = f.text_field :puesto
+  .field
+    = f.label :descripcion
+    = f.text_area :descripcion
+  .actions
+    = f.submit 'Save'

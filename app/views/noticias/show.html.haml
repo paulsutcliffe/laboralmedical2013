@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Titulo:
+  = @noticia.titulo
+%p
+  %b Subtitulo:
+  = @noticia.subtitulo
+%p
+  %b Imagen:
+  = @noticia.imagen
+%p
+  %b Contenido:
+  = @noticia.contenido
+
+= link_to 'Edit', edit_noticia_path(@noticia)
+\|
+= link_to 'Back', noticias_path

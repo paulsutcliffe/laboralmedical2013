@@ -1,4 +1,28 @@
 Laboralmedical2013::Application.routes.draw do
+  resources :noticias
+
+
+  resources :categorias
+
+
+  resources :contactos
+
+
+  resources :alianzas
+
+
+  resources :servicios
+
+
+  resources :miembros
+
+
+  resources :clientes
+
+
+  resources :banners
+
+
   root to: 'inicio#index'
 
   get "inicio/index"

@@ -11,6 +11,67 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20131017222048) do
+
+  create_table "alianzas", :force => true do |t|
+    t.string   "nombre"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "banners", :force => true do |t|
+    t.string   "imagen"
+    t.string   "encabezado"
+    t.string   "link"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "categorias", :force => true do |t|
+    t.string   "nombre"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "clientes", :force => true do |t|
+    t.string   "logo"
+    t.string   "link"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "contactos", :force => true do |t|
+    t.string   "nombre"
+    t.string   "email"
+    t.string   "telefono"
+    t.text     "mensaje"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "miembros", :force => true do |t|
+    t.string   "nombre"
+    t.string   "puesto"
+    t.text     "descripcion"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "noticias", :force => true do |t|
+    t.string   "titulo"
+    t.string   "subtitulo"
+    t.string   "imagen"
+    t.text     "contenido"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "servicios", :force => true do |t|
+    t.string   "nombre"
+    t.string   "icono"
+    t.text     "descripcion"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
 end

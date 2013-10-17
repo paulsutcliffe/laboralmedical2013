@@ -1,0 +1,19 @@
+%h1 Listing alianzas
+
+%table
+  %tr
+    %th Nombre
+    %th
+    %th
+    %th
+
+  - @alianzas.each do |alianza|
+    %tr
+      %td= alianza.nombre
+      %td= link_to 'Show', alianza
+      %td= link_to 'Edit', edit_alianza_path(alianza)
+      %td= link_to 'Destroy', alianza, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Alianza', new_alianza_path

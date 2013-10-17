@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Nombre:
+  = @miembro.nombre
+%p
+  %b Puesto:
+  = @miembro.puesto
+%p
+  %b Descripcion:
+  = @miembro.descripcion
+
+= link_to 'Edit', edit_miembro_path(@miembro)
+\|
+= link_to 'Back', miembros_path

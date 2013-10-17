@@ -1,0 +1,23 @@
+%h1 Listing miembros
+
+%table
+  %tr
+    %th Nombre
+    %th Puesto
+    %th Descripcion
+    %th
+    %th
+    %th
+
+  - @miembros.each do |miembro|
+    %tr
+      %td= miembro.nombre
+      %td= miembro.puesto
+      %td= miembro.descripcion
+      %td= link_to 'Show', miembro
+      %td= link_to 'Edit', edit_miembro_path(miembro)
+      %td= link_to 'Destroy', miembro, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Miembro', new_miembro_path
