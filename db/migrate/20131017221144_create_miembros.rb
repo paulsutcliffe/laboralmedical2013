@@ -3,6 +3,7 @@ class CreateMiembros < ActiveRecord::Migration
     create_table :miembros do |t|
       t.string :nombre
       t.string :puesto
+      t.string :foto
       t.text :descripcion
 
       t.timestamps

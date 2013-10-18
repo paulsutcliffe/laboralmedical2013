@@ -2,8 +2,8 @@ require 'faker'
 
 FactoryGirl.define do
   factory :banner do
-    imagen "MyString"
+    imagen { Rack::Test::UploadedFile.new(File.join(Rails.root,'spec','support','images','foto.jpg'))}
     encabezado { Faker::Lorem.sentence }
-    link "MyString"
+    link { Faker::Internet.url }
   end
 end

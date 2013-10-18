@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(:version => 20131017222048) do
   create_table "miembros", :force => true do |t|
     t.string   "nombre"
     t.string   "puesto"
+    t.string   "foto"
     t.text     "descripcion"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
@@ -70,8 +71,9 @@ ActiveRecord::Schema.define(:version => 20131017222048) do
     t.string   "nombre"
     t.string   "icono"
     t.text     "descripcion"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.integer  "categoria_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
 end

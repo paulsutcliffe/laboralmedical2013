@@ -4,6 +4,7 @@ class CreateServicios < ActiveRecord::Migration
       t.string :nombre
       t.string :icono
       t.text :descripcion
+      t.integer :categoria_id
 
       t.timestamps
     end
