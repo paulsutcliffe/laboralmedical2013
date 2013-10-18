@@ -2,8 +2,8 @@
 
 %table
   %tr
-    %th Nombre
     %th Icono
+    %th Nombre
     %th Descripcion
     %th
     %th
@@ -11,8 +11,8 @@
 
   - @servicios.each do |servicio|
     %tr
+      %td= image_tag servicio.icono_url(:thumb)
       %td= servicio.nombre
-      %td= servicio.icono
       %td= servicio.descripcion
       %td= link_to 'Show', servicio
       %td= link_to 'Edit', edit_servicio_path(servicio)

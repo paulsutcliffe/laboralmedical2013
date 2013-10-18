@@ -10,7 +10,7 @@
 
   - @clientes.each do |cliente|
     %tr
-      %td= cliente.logo
+      %td= image_tag cliente.logo_url(:thumb)
       %td= cliente.link
       %td= link_to 'Show', cliente
       %td= link_to 'Edit', edit_cliente_path(cliente)

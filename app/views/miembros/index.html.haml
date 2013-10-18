@@ -2,6 +2,7 @@
 
 %table
   %tr
+    %th Foto
     %th Nombre
     %th Puesto
     %th Descripcion
@@ -11,6 +12,7 @@
 
   - @miembros.each do |miembro|
     %tr
+      %td= image_tag miembro.foto_url(:thumb)
       %td= miembro.nombre
       %td= miembro.puesto
       %td= miembro.descripcion

@@ -2,9 +2,9 @@
 
 %table
   %tr
+    %th Imagen
     %th Titulo
     %th Subtitulo
-    %th Imagen
     %th Contenido
     %th
     %th
@@ -12,9 +12,9 @@
 
   - @noticias.each do |noticia|
     %tr
+      %td= image_tag noticia.imagen_url(:thumb)
       %td= noticia.titulo
       %td= noticia.subtitulo
-      %td= noticia.imagen
       %td= noticia.contenido
       %td= link_to 'Show', noticia
       %td= link_to 'Edit', edit_noticia_path(noticia)

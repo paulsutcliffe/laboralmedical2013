@@ -11,7 +11,7 @@
 
   - @banners.each do |banner|
     %tr
-      %td= banner.imagen
+      %td= image_tag banner.imagen_url(:thumb)
       %td= banner.encabezado
       %td= banner.link
       %td= link_to 'Show', banner
