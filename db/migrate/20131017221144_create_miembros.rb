@@ -5,6 +5,7 @@ class CreateMiembros < ActiveRecord::Migration
       t.string :puesto
       t.string :foto
       t.text :descripcion
+      t.string :slug
 
       t.timestamps
     end

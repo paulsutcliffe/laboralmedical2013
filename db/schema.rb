@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(:version => 20131017222048) do
     t.string   "puesto"
     t.string   "foto"
     t.text     "descripcion"
+    t.string   "slug"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
@@ -63,6 +64,7 @@ ActiveRecord::Schema.define(:version => 20131017222048) do
     t.string   "subtitulo"
     t.string   "imagen"
     t.text     "contenido"
+    t.string   "slug"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

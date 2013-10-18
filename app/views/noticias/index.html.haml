@@ -12,7 +12,7 @@
 
   - @noticias.each do |noticia|
     %tr
-      %td= image_tag noticia.imagen_url(:thumb)
+      %td= image_tag noticia.imagen_url(:regular)
       %td= noticia.titulo
       %td= noticia.subtitulo
       %td= noticia.contenido
