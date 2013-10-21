@@ -1,24 +1,24 @@
 %h1 Listing miembros
 
+- if current_admin
+  = link_to 'Nuevo Miembro', new_miembro_path
+
 %table
   %tr
     %th Foto
     %th Nombre
     %th Puesto
-    %th
-    %th
-    %th
-    %th
+    - if current_admin
+      %th
+      %th
 
   - @miembros.each do |miembro|
     %tr
-      %td= image_tag miembro.foto_url(:thumb)
-      %td= miembro.nombre
+      %td= link_to image_tag(miembro.foto_url(:thumb)), miembro
+      %td= link_to miembro.nombre , miembro
       %td= miembro.puesto
-      %td= link_to 'Show', miembro
-      %td= link_to 'Edit', edit_miembro_path(miembro)
-      %td= link_to 'Destroy', miembro, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      - if current_admin
+        %td= link_to 'Editar', edit_miembro_path(miembro)
+        %td= link_to 'Eliminar', miembro, :method => :delete, :data => { :confirm => '¿Estás seguro?' }
 
-%br
 
-= link_to 'New Miembro', new_miembro_path

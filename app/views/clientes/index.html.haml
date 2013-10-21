@@ -1,10 +1,11 @@
 %h1 Listing clientes
 
+= link_to 'Nuevo Cliente', new_cliente_path
+
 %table
   %tr
     %th Logo
     %th Link
-    %th
     %th
     %th
 
@@ -12,10 +13,5 @@
     %tr
       %td= image_tag cliente.logo_url(:thumb)
       %td= cliente.link
-      %td= link_to 'Show', cliente
       %td= link_to 'Edit', edit_cliente_path(cliente)
-      %td= link_to 'Destroy', cliente, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-%br
-
-= link_to 'New Cliente', new_cliente_path
+      %td= link_to 'Destroy', cliente, :method => :delete, :data => { :confirm => '¿Estás seguro?' }

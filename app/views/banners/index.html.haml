@@ -1,5 +1,7 @@
 %h1 Listing banners
 
+= link_to 'Nuevo Banner', new_banner_path
+
 %table
   %tr
     %th Imagen
@@ -7,17 +9,13 @@
     %th Link
     %th
     %th
-    %th
 
   - @banners.each do |banner|
     %tr
-      %td= image_tag banner.imagen_url(:thumb)
+      %td= link_to image_tag(banner.imagen_url(:thumb)), banner.link
       %td= banner.encabezado
       %td= banner.link
-      %td= link_to 'Show', banner
-      %td= link_to 'Edit', edit_banner_path(banner)
-      %td= link_to 'Destroy', banner, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %td= link_to 'Editar', edit_banner_path(banner)
+      %td= link_to 'Eliminar', banner, :method => :delete, :data => { :confirm => '¿Estás seguro?' }
 
-%br
 
-= link_to 'New Banner', new_banner_path

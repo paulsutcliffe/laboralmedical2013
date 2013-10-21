@@ -1,5 +1,8 @@
 %h1 Listing noticias
 
+- if current_admin
+  = link_to 'Nueva Noticia', new_noticia_path
+
 %table
   %tr
     %th Imagen
@@ -7,19 +10,19 @@
     %th Subtitulo
     %th Contenido
     %th
-    %th
-    %th
+    - if current_admin
+      %th
+      %th
 
   - @noticias.each do |noticia|
     %tr
-      %td= image_tag noticia.imagen_url(:regular)
-      %td= noticia.titulo
+      %td= link_to (image_tag noticia.imagen_url(:regular)), noticia
+      %td= link_to noticia.titulo , noticia
       %td= noticia.subtitulo
       %td= noticia.contenido
-      %td= link_to 'Show', noticia
-      %td= link_to 'Edit', edit_noticia_path(noticia)
-      %td= link_to 'Destroy', noticia, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %td= link_to 'Leer Más', noticia
+      - if current_admin
+        %td= link_to 'Editar', edit_noticia_path(noticia)
+        %td= link_to 'Eliminar', noticia, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }
 
-%br
 
-= link_to 'New Noticia', new_noticia_path
