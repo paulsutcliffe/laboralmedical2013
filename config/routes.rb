@@ -5,8 +5,10 @@ Laboralmedical2013::Application.routes.draw do
   match '/servicios' => 'categorias#servicios', via: :get
 
   match '/consultorias' => 'categorias#consultorias', via: :get
-
-  resources :noticias
+  
+  scope '/blog' do
+    resources :noticias
+  end
 
   resources :categorias
 
@@ -16,7 +18,9 @@ Laboralmedical2013::Application.routes.draw do
 
   resources :servicios
 
-  resources :miembros
+  scope '/staff' do
+    resources :miembros
+  end
 
   resources :clientes
 

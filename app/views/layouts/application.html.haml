@@ -29,9 +29,18 @@
           %a.brand(href="#") Laboralmedical2013
           .container.nav-collapse
             %ul.nav
-              %li= link_to "Link 1", "/path1"
-              %li= link_to "Link 2", "/path2"
-              %li= link_to "Link 3", "/path3"
+              %li= link_to "Servicios", servicios_path
+              %li= link_to "Consultorias", consultorias_path
+              %li= link_to "Blog", noticias_path
+              %li= link_to "Staff", miembros_path
+              %li= link_to "Alianzas", alianzas_path
+              - if current_admin
+                %li= link_to "Mensajes", contactos_path
+                %li= link_to "Banners", banners_path
+                %li= link_to "Clientes", clientes_path
+                %li= link_to "Cerrar Sesión", destroy_admin_session_path, :method => :delete
+              - else
+                %li= link_to "Contacto", new_contacto_path
 
     .container-fluid
 

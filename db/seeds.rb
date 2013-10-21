@@ -1,12 +1,16 @@
+#coding: utf-8
 require 'factory_girl'
 require 'database_cleaner'
 
 DatabaseCleaner.strategy = :truncation
 
 # then, whenever you need to clean the DB
-#DatabaseCleaner.clean
+DatabaseCleaner.clean
 
 FactoryGirl.create :admin
+
+Categoria.create(nombre: "Servicios")
+Categoria.create(nombre: "Consultoría")
 
 12.times do
   FactoryGirl.create :alianza
