@@ -5,7 +5,7 @@
     %th Foto
     %th Nombre
     %th Puesto
-    %th Descripcion
+    %th
     %th
     %th
     %th
@@ -15,7 +15,6 @@
       %td= image_tag miembro.foto_url(:thumb)
       %td= miembro.nombre
       %td= miembro.puesto
-      %td= miembro.descripcion
       %td= link_to 'Show', miembro
       %td= link_to 'Edit', edit_miembro_path(miembro)
       %td= link_to 'Destroy', miembro, :method => :delete, :data => { :confirm => 'Are you sure?' }

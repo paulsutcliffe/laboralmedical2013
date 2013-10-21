@@ -1,2 +1,7 @@
 %h1 Inicio#index
 %p Find me in app/views/inicio/index.html.haml
+- @banners.each do |banner|
+  = image_tag banner.imagen_url(:full)
+
+- @clientes.each do |cliente|
+  = image_tag cliente.logo_url(:thumb)
