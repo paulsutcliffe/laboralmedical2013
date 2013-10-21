@@ -1,5 +1,7 @@
 Laboralmedical2013::Application.routes.draw do
 
+  devise_for :admins
+
   match '/servicios' => 'categorias#servicios', via: :get
 
   match '/consultorias' => 'categorias#consultorias', via: :get
