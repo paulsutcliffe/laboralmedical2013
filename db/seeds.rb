@@ -16,7 +16,7 @@ Categoria.create(nombre: "Consultoría")
   FactoryGirl.create :alianza
 end
 
-12.times do
+2.times do
   FactoryGirl.create :banner
 end
 

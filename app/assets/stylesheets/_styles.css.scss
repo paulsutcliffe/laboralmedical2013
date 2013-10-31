@@ -1,0 +1,65 @@
+
+.navbar-default,
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {border: 0}
+.navbar-nav {
+  & > li {
+    & > a {text-transform: uppercase}
+    &.last {
+      a {padding-right: 0}
+    }  
+  }
+}
+
+#logo {position: relative; z-index: 200; margin-top: 20px; margin-bottom: 20px;
+  @extend .clearfix;
+  a {padding: 0}
+}
+
+
+#carousel-generic {
+  .carousel-inner {
+    img {width: 100%}
+  }
+}
+
+#home-productos {
+  img {float: left; margin-right: 20px}
+}
+
+ul {
+  @include no-bullet;
+}
+
+$icons-sprite-dimensions: true;
+@import "icons/*.png"; /**/
+@include all-icons-sprites;
+
+#main-header {
+  i.icon {
+    display: block; margin-left: 10px;
+    &.mail_small {@include icons-sprite(mail_small)}
+    &.location_small {@include icons-sprite(location_small)}
+    &.facebook_small {@include icons-sprite(facebook_small)}
+    &.telefono_small {@include icons-sprite(telefono_small)}
+  }
+}
+
+#main-footer {
+  i.icon {
+    display: block;
+    &.mail {@include icons-sprite(mail)}
+    &.location {@include icons-sprite(location)}
+    &.facebook {@include icons-sprite(facebook)}
+    &.telefono {@include icons-sprite(telefono)}
+  }
+}
+
+.social-links {
+  #main-header & {
+    float: right; text-align: right;
+    li {@include inline-block}
+  }
+  #main-footer & {
+
+  }
+}

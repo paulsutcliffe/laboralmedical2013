@@ -1,7 +1,29 @@
-%h1 Inicio#index
-%p Find me in app/views/inicio/index.html.haml
-- @banners.each do |banner|
-  = image_tag banner.imagen_url(:full)
 
-- @clientes.each do |cliente|
-  = image_tag cliente.logo_url(:thumb)
+= render 'bootstrap3_carousel'
+
+
+%section#home-productos.container
+  .region
+    .region-inner
+      %h2.title titulo
+    .region-inner
+      %h2.title titulo
+    .region-inner
+      %h2.title titulo
+    .region-inner
+      %h2.title titulo
+     
+
+
+= render 'shared/siguenos_facebook'
+
+
+%section#clientes-list
+  .container
+    .region
+      .region-title
+        %h2.title Clientes
+        Confían en Laboral Medical
+      .region-inner
+        - @clientes.each do |cliente|
+          = image_tag cliente.logo_url(:thumb)

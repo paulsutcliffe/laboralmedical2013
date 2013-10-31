@@ -1,0 +1,28 @@
+
+
+
+
+#carousel-generic.carousel.banner
+
+  %ol.carousel-indicators
+    - @banners.each_with_index do |banner, index|
+      - if index == 0
+        %li.active{:'data-target' => '#carousel-generic', :'data-banner-to' => index}
+      - else
+        %li{:'data-target' => '#carousel-generic', :'data-banner-to' => index}
+
+  .carousel-inner
+    - @banners.each_with_index do |banner, index|
+      - if index == 0
+        .item.active
+          = image_tag banner.imagen_url(:full)
+      - else
+        .item
+          = image_tag banner.imagen_url(:full)
+          .carousel-caption
+            %p.caption
+              = banner.encabezado
+
+  -#
+    = link_to content_tag(:span, '', class: 'icon-prev'), '#carousel-generic', :'data-banner' => 'prev'
+    = link_to content_tag(:span, '', class: 'icon-next'), '#carousel-generic', :'data-banner' => 'next'

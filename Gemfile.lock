@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/anjlab/bootstrap-rails.git
+  revision: 834e6f2cd82acc30b362c56a7e60bcc9d990015f
+  specs:
+    anjlab-bootstrap-rails (3.0.0.3)
+      railties (>= 3.0)
+      sass (>= 3.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -52,6 +60,7 @@ GEM
       json (>= 1.7)
     childprocess (0.3.9)
       ffi (~> 1.0, >= 1.0.11)
+    chunky_png (1.2.9)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -59,6 +68,12 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    compass (0.12.2)
+      chunky_png (~> 1.2)
+      fssm (>= 0.2.7)
+      sass (~> 3.1)
+    compass-rails (1.0.3)
+      compass (>= 0.12.2, < 0.14)
     database_cleaner (0.9.1)
     devise (3.1.1)
       bcrypt-ruby (~> 3.0)
@@ -79,6 +94,7 @@ GEM
     ffi (1.9.0)
     friendly_id (4.0.10.1)
       activerecord (>= 3.0, < 4.0)
+    fssm (0.2.10)
     haml (4.0.3)
       tilt
     haml-rails (0.4)
@@ -190,11 +206,6 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    twitter-bootstrap-rails (2.2.8)
-      actionpack (>= 3.1)
-      execjs
-      rails (>= 3.1)
-      railties (>= 3.1)
     tzinfo (0.3.38)
     uglifier (2.2.1)
       execjs (>= 0.3.0)
@@ -214,10 +225,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  anjlab-bootstrap-rails!
   capistrano
   capybara (~> 2.0.2)
   carrierwave
   coffee-rails (~> 3.2.1)
+  compass-rails
   database_cleaner (~> 0.9.1)
   devise
   factory_girl_rails (~> 4.2.1)
@@ -235,7 +248,6 @@ DEPENDENCIES
   rspec-rails (~> 2.13.0)
   rvm-capistrano
   sass-rails (~> 3.2.3)
-  twitter-bootstrap-rails
   uglifier (>= 1.0.3)
   unicorn
   will_paginate

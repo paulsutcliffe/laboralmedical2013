@@ -1,0 +1,19 @@
+
+
+#boxes-modal.modal.fade
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button{tipe: 'button', class: 'close', :"data-dismiss" => 'modal', :"aria-hidden" => 'true'}
+          &times;
+        %h4.modal-title
+          Plano de ubicación de los boxes
+
+      .modal-body
+        = image_tag '/assets/plano-boxes.jpg'
+      .modal-footer
+        %button{tipe: 'button', class: 'btn btn-default', :"data-dismiss" => 'modal', :"aria-hidden" => 'true'}
+          Cerrar
+
+
+

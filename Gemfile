@@ -16,7 +16,7 @@ group :assets do
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
-
+  gem 'compass-rails'
   gem 'uglifier', '>= 1.0.3'
 end
 
@@ -37,7 +37,8 @@ gem "capistrano"
 # To use debugger
 # gem 'debugger'
 
-gem "twitter-bootstrap-rails", :group => :assets
+gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
+                              :github => 'anjlab/bootstrap-rails'
 gem "rvm-capistrano"
 gem "haml"
 gem "haml-rails"
