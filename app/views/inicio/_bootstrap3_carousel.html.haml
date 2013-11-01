@@ -2,20 +2,23 @@
 
 
 
-#carousel-generic.carousel.banner
+#carousel-generic.carousel.slide
 
   %ol.carousel-indicators
     - @banners.each_with_index do |banner, index|
       - if index == 0
-        %li.active{:'data-target' => '#carousel-generic', :'data-banner-to' => index}
+        %li.active{:'data-target' => '#carousel-generic', :'data-slide-to' => index}
       - else
-        %li{:'data-target' => '#carousel-generic', :'data-banner-to' => index}
+        %li{:'data-target' => '#carousel-generic', :'data-slide-to' => index}
 
   .carousel-inner
     - @banners.each_with_index do |banner, index|
       - if index == 0
         .item.active
           = image_tag banner.imagen_url(:full)
+          .carousel-caption
+            %p.caption
+              = banner.encabezado
       - else
         .item
           = image_tag banner.imagen_url(:full)

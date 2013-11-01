@@ -12,13 +12,27 @@
     @extend .col-lg-4;
     @extend .col-md-4;
     @extend .col-sm-4;
-    @extend .col-xs-4;
+    @extend .col-xs-12;
   }
   .navbar {
     @extend .col-lg-8;
     @extend .col-md-8;
     @extend .col-sm-8;
-    @extend .col-xs-8;  
+    @extend .col-xs-12;  
+  }
+}
+
+#main-footer {
+  .region-inner {
+    ul {
+      @extend .row;
+      li {
+        @extend .col-lg-3;
+        @extend .col-md-3;
+        @extend .col-sm-3;
+        @extend .col-xs-6;
+      }
+    }
   }
 }
 
@@ -27,7 +41,17 @@
   .region-inner {
     @extend .col-lg-6;
     @extend .col-md-6;
-    @extend .col-sm-12;
-    @extend .col-xs-4;
+    @extend .col-sm-6;
+    @extend .col-xs-12;
   }
 }
+
+#region-clientes {
+  .region-inner {
+    @extend .col-lg-3;
+    @extend .col-md-3;
+    @extend .col-sm-3;
+    @extend .col-xs-6;
+  }
+}
+

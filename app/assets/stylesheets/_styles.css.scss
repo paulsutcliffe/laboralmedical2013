@@ -1,12 +1,27 @@
 
 .navbar-default,
-.navbar-default .navbar-collapse, .navbar-default .navbar-form {border: 0}
-.navbar-nav {
-  & > li {
-    & > a {text-transform: uppercase}
-    &.last {
-      a {padding-right: 0}
-    }  
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {border: 0; margin: 0}
+
+.navbar-default {
+  .navbar-nav {
+    & > li {
+      margin-left: 20px;
+      & > a {text-transform: uppercase; padding: 0}
+      &.last {
+        a {padding-right: 0}
+      }  
+    }
+  }
+  @media (max-width:640px) { 
+    .navbar-collapse.collapsing, 
+    .navbar-collapse.in {
+      li {
+        margin: 0 0 1px; display: block;
+        a {background: $crema; color: white; text-align: center; padding: 10px;
+          &:hover {background: darken($crema, 15%)}
+        }
+      }
+    }
   }
 }
 
@@ -15,15 +30,34 @@
   a {padding: 0}
 }
 
+#main-footer {
+  background: black; padding: 40px 0; text-transform: uppercase;
+  li { text-align: center; color: white}
+  a {color: white; word-wrap: break-word}
+}
 
+#carousel-generic {
+    @extend .default-bottom;
+}
+section {
+  .region-inner {
+    @extend .default-bottom;
+  }
+}
 #carousel-generic {
   .carousel-inner {
     img {width: 100%}
+    .carousel-caption {
+      bottom: auto; top: 30px; left: 8%;
+      p {font-size: $caption; text-align: left; font-weight: 900}
+    }
   }
 }
 
 #home-productos {
-  img {float: left; margin-right: 20px}
+  .region-inner {
+    img {margin-top: 3px; @extend .image-left}
+  }
 }
 
 ul {
@@ -35,6 +69,7 @@ $icons-sprite-dimensions: true;
 @include all-icons-sprites;
 
 #main-header {
+  .social-links {@extend .visible-lg; @extend .visible-md}
   i.icon {
     display: block; margin-left: 10px;
     &.mail_small {@include icons-sprite(mail_small)}
@@ -45,8 +80,9 @@ $icons-sprite-dimensions: true;
 }
 
 #main-footer {
+  .social-links {@extend .default-bottom; padding-left: 0}
   i.icon {
-    display: block;
+    display: block; margin: 0 auto;
     &.mail {@include icons-sprite(mail)}
     &.location {@include icons-sprite(location)}
     &.facebook {@include icons-sprite(facebook)}
@@ -62,4 +98,19 @@ $icons-sprite-dimensions: true;
   #main-footer & {
 
   }
+}
+
+.region-alt {
+  background: $crema; padding-top: 50px;
+  @extend .region-centered;
+  h2.title, .subtitle {color: white}
+}
+
+
+#siguenos-facebook {
+  @extend .region-iframe-responsive;
+}
+#region-clientes {
+  .subtitle {@extend .default-bottom}
+  .region-inner {text-align: center}
 }

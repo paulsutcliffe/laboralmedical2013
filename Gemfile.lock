@@ -107,6 +107,8 @@ GEM
       activesupport (>= 3.2, < 5)
     highline (1.6.20)
     hike (1.2.3)
+    holder_rails (2.0.0)
+      railties (>= 3.1.0)
     i18n (0.6.5)
     inherited_resources (1.4.1)
       has_scope (~> 0.6.0.rc)
@@ -238,6 +240,7 @@ DEPENDENCIES
   friendly_id (~> 4.0.9)
   haml
   haml-rails
+  holder_rails
   inherited_resources
   jquery-rails
   launchy (~> 2.2.0)

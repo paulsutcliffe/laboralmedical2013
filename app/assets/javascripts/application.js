@@ -12,5 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require twitter/bootstrap
-//= require_tree .
+//= require twitter/bootstrap/transition
+//= require twitter/bootstrap/carousel
+//= require twitter/bootstrap/collapse
+//= require holder
+
+

@@ -4,7 +4,19 @@ body {font-family: 'Lato'}
 h1, h2, h3, h4, h5, h6 {margin: 0; line-height: 100%}
 
 
-
+h2.title, .subtitle {text-transform: uppercase;
+  .region-centered & {text-align: center}
+}
+h2.title {font-size: $title; font-weight: bold; margin-bottom: 10px}
+.subtitle {font-size: $subtitle; margin-bottom: 15px; display: block}
 .region-title {
   & > h2.title {text-transform: uppercase}
+}
+
+p, #content li {font-size: $paragraph; margin-bottom: 10px}
+
+#main-footer {
+  * {
+  font-size: $legible; font-weight: 300; color: white;
+  }
 }

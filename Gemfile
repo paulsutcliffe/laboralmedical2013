@@ -39,6 +39,8 @@ gem "capistrano"
 
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
                               :github => 'anjlab/bootstrap-rails'
+
+gem 'holder_rails'
 gem "rvm-capistrano"
 gem "haml"
 gem "haml-rails"

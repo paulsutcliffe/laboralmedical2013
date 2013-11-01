@@ -5,25 +5,47 @@
 %section#home-productos.container
   .region
     .region-inner
+      = holder_tag '140x140', '140x140', 'social'
       %h2.title titulo
+      %span.subtitle Subtítulo
+      %p Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
     .region-inner
+      = holder_tag '140x140', '140x140', 'social'
       %h2.title titulo
+      %span.subtitle Subtítulo
+      %p Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
     .region-inner
+      = holder_tag '140x140', '140x140', 'social'
       %h2.title titulo
+      %span.subtitle Subtítulo
+      %p Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
     .region-inner
+      = holder_tag '140x140', '140x140', 'social'
       %h2.title titulo
+      %span.subtitle Subtítulo
+      %p Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
      
 
 
 = render 'shared/siguenos_facebook'
 
 
-%section#clientes-list
+%section#region-clientes.region-alt
   .container
     .region
       .region-title
         %h2.title Clientes
-        Confían en Laboral Medical
-      .region-inner
-        - @clientes.each do |cliente|
+        %span.subtitle Confían en Laboral Medical
+      - @clientes.each do |cliente|
+        .region-inner
           = image_tag cliente.logo_url(:thumb)
+
+%footer#main-footer
+  .container
+    .region
+      .region-title
+        %h2.element-invisible Footer
+      .region-inner
+        = render 'shared/social_large'
+        %p.copyright
+          LABORAL MEDICAL TODOS LOS DERECHOS RESERVADOS 2013.
