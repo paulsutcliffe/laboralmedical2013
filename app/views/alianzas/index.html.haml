@@ -1,18 +1,31 @@
-%h1 Listing alianzas
+
+= encabezado('Alianzas', '/assets/encabezado.jpg', '/assets/icono-alianzas.png', false)
 
 - if current_admin
   = link_to 'Nueva Alianza', new_alianza_path
 
-%table
-  %tr
-    %th Nombre
-    - if current_admin
-      %th
-      %th
+.container
+  #alianzas-descripcion.region
+    .region-title
+      %h2.title Subítulo
 
-  - @alianzas.each do |alianza|
-    %tr
-      %td= alianza.nombre
-      - if current_admin
-        %td= link_to 'Editar', edit_alianza_path(alianza)
-        %td= link_to 'Eliminar', alianza, :method => :delete, :data => { :confirm => '¿Estás seguro?' }
+    .region-inner
+      %p 
+        Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, 
+        there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+
+  #alianzas-logos.region
+    .region-inner
+      %table
+        %tr
+          %th Nombre
+          - if current_admin
+            %th
+            %th
+      
+        - @alianzas.each do |alianza|
+          %tr
+            %td= alianza.nombre
+            - if current_admin
+              %td= link_to 'Editar', edit_alianza_path(alianza)
+              %td= link_to 'Eliminar', alianza, :method => :delete, :data => { :confirm => '¿Estás seguro?' }

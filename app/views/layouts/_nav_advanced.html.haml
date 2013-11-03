@@ -11,16 +11,12 @@
   / Collect the nav links, forms, and other content for toggling
   .collapse.navbar-collapse.navbar-ex1-collapse
     %ul.nav.navbar-nav.navbar-right
-      %li
-        = link_to 'Servicios', ''
-      %li
-        = link_to 'Consultorías', ''
-      %li
-        = link_to 'Blog', ''
-      %li
-        = link_to 'Staff', ''
-      %li
-        = link_to 'Alianzas', ''
-      %li.last
-        = link_to 'Contacto', ''
+      = menu_li('Inicio', 'inicio', root_path)
+      = menu_li('Servicios', 'categorias', servicios_path)
+      = menu_li('Consultorías', 'categorias', consultorias_path)
+      = menu_li('Blog', 'noticias', noticias_path)
+      = menu_li('Staff', 'miembros', miembros_path)
+      = menu_li('Alianzas', 'alianzas', alianzas_path)
+      = menu_li('Contacto', 'contactos', new_contacto_path)
+      
   / /.navbar-collapse

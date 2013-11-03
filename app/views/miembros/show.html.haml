@@ -1,15 +1,17 @@
-%p#notice= notice
+= encabezado('Staff', '/assets/encabezado.jpg', '/assets/icono-alianzas.png', true)
 
-%p
-  %b Nombre:
-  = @miembro.nombre
-%p
-  %b Puesto:
-  = @miembro.puesto
-%p
-  %b Descripcion:
-  = @miembro.descripcion
 
-= link_to 'Edit', edit_miembro_path(@miembro)
-\|
-= link_to 'Back', miembros_path
+#region-staff-show.container
+  .region
+    .region-inner
+      %h3.title
+        = @miembro.nombre
+      %h4.subtitle
+      = @miembro.puesto
+
+    .region-inner
+      = paragraph(@miembro.descripcion)
+
+      = link_to 'Edit', edit_miembro_path(@miembro)
+      \|
+      = link_to 'Back', miembros_path

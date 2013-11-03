@@ -44,7 +44,7 @@
     @extend .col-sm-6;
     @extend .col-xs-12;
   }
-}
+}.row
 
 #region-clientes {
   .region-inner {
@@ -55,3 +55,122 @@
   }
 }
 
+
+// new_contacto_path
+#region-address {
+  .region-inner {
+    @extend .col-lg-6;
+    @extend .col-md-6;
+    @extend .col-sm-6;
+    @extend .col-xs-6;
+  }
+}
+
+#region-form {
+  .region-inner {
+    @extend .col-lg-10;
+    @extend .col-md-10;
+    @extend .col-sm-10;
+    @extend .col-xs-10;
+
+    @extend .col-lg-offset-1;
+    @extend .col-md-offset-1;
+    @extend .col-sm-offset-1;
+    @extend .col-xs-offset-1;
+  }
+
+  .form {@extend .row}
+  .fields {
+    @extend .col-lg-6;
+    @extend .col-md-6;
+    @extend .col-sm-6;
+    @extend .col-xs-6;
+  }
+}
+
+
+// alianzas_path
+#alianzas-descripcion {
+  .region-inner {
+    @extend .col-lg-6;
+    @extend .col-md-6;
+    @extend .col-sm-6;
+    @extend .col-xs-6;
+  }
+}
+
+// miembros_path
+#region-staff {
+  .region-inner {
+    @extend .col-lg-3;
+    @extend .col-md-3;
+    @extend .col-sm-3;
+    @extend .col-xs-3;
+  }
+}
+
+#region-staff-show  {
+  .region-inner {
+    @extend .col-lg-6;
+    @extend .col-md-6;
+    @extend .col-sm-6;
+    @extend .col-xs-6;
+  }
+}
+
+
+// noticias_path
+#region-blog {
+  .region-inner {
+    @extend .col-lg-6;
+    @extend .col-md-6;
+    @extend .col-sm-6;
+    @extend .col-xs-6;
+  }
+}
+
+#region-blog-show {
+  .region-inner {
+    @extend .col-lg-8;
+    @extend .col-md-8;
+    @extend .col-sm-8;
+    @extend .col-xs-8;
+  }
+  aside {
+    @extend .col-lg-4;
+    @extend .col-md-4;
+    @extend .col-sm-4;
+    @extend .col-xs-4;
+  }  
+}
+
+// consultorias_path
+#region-consultorias {
+  .region-inner {
+    @extend .col-lg-6;
+    @extend .col-md-6;
+    @extend .col-sm-6;
+    @extend .col-xs-6;
+  }
+}
+
+// servicios_path
+#region-fortalezas {
+  .region-inner {
+    @extend .col-lg-4;
+    @extend .col-md-4;
+    @extend .col-sm-4;
+    @extend .col-xs-4;
+  }
+}
+
+#region-servicios {
+  .region-inner {
+    @extend .col-lg-6;
+    @extend .col-md-6;
+    @extend .col-sm-6;
+    @extend .col-xs-6;
+  }
+}
+
+ 

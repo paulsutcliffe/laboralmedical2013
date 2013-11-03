@@ -1,24 +1,24 @@
-%h1 Listing miembros
+= encabezado('Staff', '/assets/encabezado.jpg', '/assets/icono-alianzas.png', false)
 
 - if current_admin
   = link_to 'Nuevo Miembro', new_miembro_path
 
-%table
-  %tr
-    %th Foto
-    %th Nombre
-    %th Puesto
-    - if current_admin
-      %th
-      %th
 
-  - @miembros.each do |miembro|
-    %tr
-      %td= link_to image_tag(miembro.foto_url(:thumb)), miembro
-      %td= link_to miembro.nombre , miembro
-      %td= miembro.puesto
-      - if current_admin
-        %td= link_to 'Editar', edit_miembro_path(miembro)
-        %td= link_to 'Eliminar', miembro, :method => :delete, :data => { :confirm => '¿Estás seguro?' }
+#region-staff.container
+  .region
+    .region-title
+      %h2.title CONOCE A NUESTRO STAFF DE PROFESIONALES
+  - @miembros.each_slice(4) do |miembro|
+    .region
+      - miembro.each do |miembro|
+        .region-inner
+          = link_to image_tag(miembro.foto_url(:thumb)), miembro
+          %h3.title
+            = link_to miembro.nombre , miembro
+          %h4.subtitle
+            = miembro.puesto
+          - if current_admin
+            = link_to 'Editar', edit_miembro_path(miembro)
+            = link_to 'Eliminar', miembro, :method => :delete, :data => { :confirm => '¿Estás seguro?' }
 
 

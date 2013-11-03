@@ -13,5 +13,15 @@
   #content
     = yield
 
+  %footer#main-footer
+    .container
+      .region
+        .region-title
+          %h2.element-invisible Footer
+        .region-inner
+          = render 'shared/social_large'
+          %p.copyright
+            LABORAL MEDICAL TODOS LOS DERECHOS RESERVADOS 2013.
+
   = javascript_include_tag 'application'
   = yield :javascript

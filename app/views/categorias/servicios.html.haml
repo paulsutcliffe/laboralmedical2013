@@ -1,1 +1,23 @@
-= render('lista')
+= encabezado('Servicios', '/assets/encabezado.jpg', '/assets/icono-servicios.png', false)
+
+#region-fortalezas.container
+  .region
+    .region-inner
+      = image_tag 'iframe-map.jpg'
+      %h2.title Fortaleza 1
+    .region-inner
+      = image_tag 'iframe-map.jpg'
+      %h2.title Fortaleza 1
+
+    .region-inner
+      = image_tag 'iframe-map.jpg'
+      %h2.title Fortaleza 1
+
+#region-servicios.container
+  .region
+    .region-inner.reel
+      %h2.title Reel
+      = image_tag 'iframe-map.jpg'
+    .region-inner
+      %h2.title Servicios
+      = render('lista')

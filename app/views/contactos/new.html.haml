@@ -1,5 +1,48 @@
-%h1 New contacto
+.container
+  .region-title
+    %h2.title New contacto
 
-= render 'form'
+.map-wrapper 
+  = image_tag 'iframe-map.jpg'
+
+
+#region-address.container
+  %address
+    .region-inner
+      %h2.title Dirección
+      %ul.icons
+        %li
+          %i.map_small
+          %p
+            GRIMALDO DEL SOLAR 231 OF. 101 <br>
+            MIRAFLORES, LIMA.
+  
+    .region-inner
+      %h2.title Datos de contacto
+      %ul.icons
+        %li
+          %i.contact_small
+          %p
+            INFO@LABORALMEDICALPERU.COM
+        %li
+          %i.phone_small
+          %p
+            2495227	 | 4455059
+        %li
+          %i.cellphone_small
+          %p
+            999857980 | 413*1130
+
+  
+
+
+
+
+#region-form.container
+  .region-title
+    %h2.title Escríbenos
+
+  .region-inner
+    = render 'form'
 
 = link_to 'Back', contactos_path

@@ -1,17 +1,22 @@
-%p#notice= notice
+= encabezado('Blog', '/assets/encabezado.jpg', '/assets/icono-blog.png', true)
 
-%p
-  %b Titulo:
-  = @noticia.titulo
-%p
-  %b Subtitulo:
-  = @noticia.subtitulo
-%p
-  %b Imagen:
-  = @noticia.imagen
-%p
-  %b Contenido:
-  = @noticia.contenido
+#region-blog-show.container
+  .region
+    .region-inner
+      %h3.title
+        = @noticia.titulo
+      %span.date
+        20 de noviembre 
+      %span.subtitle
+      = @noticia.subtitulo
+    
+      = image_tag @noticia.imagen_url(:regular)
+
+      = @noticia.contenido
+
+    %aside
+
+  
 
 = link_to 'Edit', edit_noticia_path(@noticia)
 \|

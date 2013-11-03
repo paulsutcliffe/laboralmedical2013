@@ -6,9 +6,9 @@
   .navbar-nav {
     & > li {
       margin-left: 20px;
-      & > a {text-transform: uppercase; padding: 0}
+      & > a, & > span {text-transform: uppercase; padding: 0}
       &.last {
-        a {padding-right: 0}
+        a, span {padding-right: 0}
       }  
     }
   }
@@ -60,6 +60,18 @@ section {
   }
 }
 
+.encabezado {
+  @extend .default-bottom;
+  .container { 
+    position: relative;
+    h2 {@include absolute(left, top, 0, 0); margin-top: 8%}
+    .btn-back {@include absolute(right, top, 0, 0); margin-top: 9%}
+  }
+  img.title-pic {width: 100%}
+}
+
+.btn-back {}
+
 ul {
   @include no-bullet;
 }
@@ -90,6 +102,28 @@ $icons-sprite-dimensions: true;
   }
 }
 
+input,
+textarea {@extend .custom-border}
+
+
+
+.icons {
+  i {
+    display: block; margin: 0 auto;
+    &.map_small {@include icons-sprite(map_small)}
+    &.contact_small {@include icons-sprite(contact_small)}
+    &.phone_small {@include icons-sprite(phone_small)}
+    &.cellphone_small {@include icons-sprite(cellphone_small)}
+
+  }
+
+  #region-address & {
+    padding: 0;
+    i {float: left; margin: 5px 10px 0 0}
+    p {overflow: hidden}
+  }
+}
+
 .social-links {
   #main-header & {
     float: right; text-align: right;
@@ -100,6 +134,12 @@ $icons-sprite-dimensions: true;
   }
 }
 
+.region-title {
+  @extend .default-bottom;
+  .encabezado & {
+    margin: 0
+  }
+}
 .region-alt {
   background: $crema; padding-top: 50px;
   @extend .region-centered;
@@ -113,4 +153,30 @@ $icons-sprite-dimensions: true;
 #region-clientes {
   .subtitle {@extend .default-bottom}
   .region-inner {text-align: center}
+}
+
+
+#region-form {
+  form {@extend .custom-border; @extend .clearfix;
+    fieldset {@extend .well}
+  }
+}
+
+#region-staff {
+  .region-inner {
+    text-align: center;
+  }
+}
+
+.reel,
+#region-fortalezas,
+#region-blog {
+  @extend .region-img-responsive;
+}
+
+.map-wrapper {@extend .default-bottom;}
+.not-front {
+  .region-inner {
+    @extend .default-bottom;
+  }
 }

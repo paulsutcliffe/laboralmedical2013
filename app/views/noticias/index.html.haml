@@ -1,28 +1,27 @@
-%h1 Listing noticias
+
+= encabezado('Blog', '/assets/encabezado.jpg', '/assets/icono-blog.png', false)
+
 
 - if current_admin
   = link_to 'Nueva Noticia', new_noticia_path
 
-%table
-  %tr
-    %th Imagen
-    %th Titulo
-    %th Subtitulo
-    %th Contenido
-    %th
-    - if current_admin
-      %th
-      %th
-
-  - @noticias.each do |noticia|
-    %tr
-      %td= link_to (image_tag noticia.imagen_url(:regular)), noticia
-      %td= link_to noticia.titulo , noticia
-      %td= noticia.subtitulo
-      %td= noticia.contenido
-      %td= link_to 'Leer Más', noticia
-      - if current_admin
-        %td= link_to 'Editar', edit_noticia_path(noticia)
-        %td= link_to 'Eliminar', noticia, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }
+#region-blog.container
+  - @noticias.each_slice(1) do |noticia|
+    .region
+      - noticia.each do |noticia|
+        .region-inner
+          %h3.title
+            = link_to noticia.titulo , noticia
+          %span.date
+            10 de julio de 2013
+          %span.subtitle
+            = noticia.subtitulo
+          = noticia.contenido
+          = link_to 'Leer Más', noticia, class: 'btn-more'
+        .region-inner
+          = link_to (image_tag noticia.imagen_url(:regular)), noticia
+        - if current_admin
+          = link_to 'Editar', edit_noticia_path(noticia)
+          = link_to 'Eliminar', noticia, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }
 
 
