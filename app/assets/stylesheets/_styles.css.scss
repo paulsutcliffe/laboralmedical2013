@@ -102,10 +102,17 @@ $icons-sprite-dimensions: true;
   }
 }
 
+ .social-links p,
+ .social-links li {text-align: center}
+
+.icon i.icon_post {@include icons-sprite(icon_post); @extend .image-left}
+
 input,
 textarea {@extend .custom-border}
 
-
+.btn-more {@extend .custom-border; color: black; padding: 10px 20px;
+  p + & {float:left; clear:left; margin-top: 20px}
+}
 
 .icons {
   i {
@@ -178,5 +185,24 @@ textarea {@extend .custom-border}
 .not-front {
   .region-inner {
     @extend .default-bottom;
+  }
+}
+
+#region-consultorias,
+#region-servicios {
+  @extend .gallery-list;
+}
+
+#region-fortalezas {
+  img {margin-bottom: 10px}
+}
+
+#region-blog {
+  @extend .gallery-list-alt
+}
+
+aside {
+  .region-inner {
+    margin-bottom: 30px !important
   }
 }

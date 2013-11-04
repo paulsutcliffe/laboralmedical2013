@@ -4,10 +4,11 @@
 
 
 - @servicios.each do |servicio|
-  = image_tag servicio.icono_url(:thumb)
-  %h3.title
-    = servicio.nombre
-  = paragraph(servicio.descripcion)
-  - if current_admin
-    = link_to 'Editar', edit_servicio_path(servicio)
-    = link_to 'Eliminar', servicio, :method => :delete, :data => { :confirm => '¿Estás seguro?' }
+  %li
+    = image_tag servicio.icono_url(:thumb_servicios)
+    %h3.title
+      = servicio.nombre
+    = paragraph(servicio.descripcion)
+    - if current_admin
+      = link_to 'Editar', edit_servicio_path(servicio)
+      = link_to 'Eliminar', servicio, :method => :delete, :data => { :confirm => '¿Estás seguro?' }

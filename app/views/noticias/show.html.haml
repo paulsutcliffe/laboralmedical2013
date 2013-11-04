@@ -3,21 +3,31 @@
 #region-blog-show.container
   .region
     .region-inner
-      %h3.title
+      %h2.title
         = @noticia.titulo
       %span.date
         20 de noviembre 
       %span.subtitle
       = @noticia.subtitulo
     
-      = image_tag @noticia.imagen_url(:regular)
+      = image_tag @noticia.imagen_url(:regular), class: 'image-border img-responsive'
 
-      = @noticia.contenido
+      = paragraph(@noticia.contenido)
 
-    %aside
+    %aside.region.icon
+      .region-title
+        %h2.title Posts Recientes
 
+      .region-inner
+        %i.icon_post
+        %h3.title Título
+        %span.date 10 de julio 
+      .region-inner
+        %i.icon_post
+        %h3.title Título
+        %span.date 10 de julio 
   
-
-= link_to 'Edit', edit_noticia_path(@noticia)
-\|
-= link_to 'Back', noticias_path
+- if current_admin
+  = link_to 'Edit', edit_noticia_path(@noticia)
+  \|
+  = link_to 'Back', noticias_path
