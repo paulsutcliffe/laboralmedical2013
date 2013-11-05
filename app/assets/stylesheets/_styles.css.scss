@@ -17,9 +17,10 @@
     .navbar-collapse.in {
       li {
         margin: 0 0 1px; display: block;
-        a {background: $crema; color: white; text-align: center; padding: 10px;
+        a, span {background: $crema; color: white; text-align: center; padding: 10px; display: block;
           &:hover {background: darken($crema, 15%)}
         }
+        span {background: darken($crema, 15%)}
       }
     }
   }
@@ -72,6 +73,8 @@ section {
 
 .btn-back {}
 
+.reel {@extend .clearfix}
+
 ul {
   @include no-bullet;
 }
@@ -111,7 +114,7 @@ input,
 textarea {@extend .custom-border}
 
 .btn-more {@extend .custom-border; color: black; padding: 10px 20px;
-  p + & {float:left; clear:left; margin-top: 20px}
+  p + & {float:left; clear:left; margin: 20px 0 }
 }
 
 .icons {
@@ -206,3 +209,4 @@ aside {
     margin-bottom: 30px !important
   }
 }
+

@@ -1,6 +1,19 @@
 
+#main-header .region-inner {margin: 0}
 .navbar-toggle {margin-right: 0}
 @media (max-width: 767px) {
+  .encabezado {margin-bottom: 10px;
+    .container {
+    h2 {margin-top: 12px; width: 100%; text-align: center;
+        img {height: 40px}
+      }
+    }
+  }
+ 
+ label {display: block}
+  .well, #region-form form fieldset {padding: 10px 0}
+  textarea {width: 100%}
+
   #carousel-generic .carousel-inner .carousel-caption {
     padding-top: 0;
     p {font-size: $responsive; font-weight: 300}

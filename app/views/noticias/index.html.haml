@@ -10,6 +10,9 @@
     - if index == 0
       .region.first
         - noticia.each_with_index do |noticia|
+          .region-inner.figure
+            = link_to (image_tag noticia.imagen_url(:regular)), noticia
+
           .region-inner
             %h3.title
               = link_to noticia.titulo , noticia
@@ -19,8 +22,7 @@
               = noticia.subtitulo
             = paragraph_truncate(noticia.contenido, 200)
             = link_to 'Leer Más', noticia, class: 'btn-more'
-          .region-inner
-            = link_to (image_tag noticia.imagen_url(:regular)), noticia
+
           - if current_admin
             = link_to 'Editar', edit_noticia_path(noticia)
             = link_to 'Eliminar', noticia, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }
@@ -28,6 +30,9 @@
     - else
       .region
         - noticia.each_with_index do |noticia|
+          .region-inner.figure
+            = link_to (image_tag noticia.imagen_url(:regular)), noticia
+
           .region-inner
             %h3.title
               = link_to noticia.titulo , noticia
@@ -37,8 +42,7 @@
               = noticia.subtitulo
             = paragraph_truncate(noticia.contenido, 200)
             = link_to 'Leer Más', noticia, class: 'btn-more'
-          .region-inner
-            = link_to (image_tag noticia.imagen_url(:regular)), noticia
+
           - if current_admin
             = link_to 'Editar', edit_noticia_path(noticia)
             = link_to 'Eliminar', noticia, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }

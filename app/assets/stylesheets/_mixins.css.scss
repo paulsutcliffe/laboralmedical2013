@@ -26,11 +26,18 @@
   li, .region {border-bottom: 2px solid #ccc; padding-top: 50px; 
     .region-inner {margin-bottom: 50px}
   }
-  .region-inner {padding-left: 0}
-  .region-inner + .region-inner {padding-right: 0}
+  
+  @media (min-width: 800px) {
+    .region-inner.figure {padding-right: 0; float: right}
+
+  }
+
+  .region-inner + .region-inner {}
   li.first, .region.first {padding-top: 0}
   li.last, .region.last {border: 0}
-  @extend .image-border;
+  img {
+    @extend .image-border;
+  }
 }
 
 
