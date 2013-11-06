@@ -3,27 +3,18 @@
     %h2.title New contacto
 
 .map-wrapper 
-  = image_tag 'iframe-map.jpg', class: ' img-responsive'
-
+  = render '/shared/mapa'
 
 #region-address.container
   %address
     .region-inner
-      %h2.title Dirección
+      %h2.title SEDE LIMA
       %ul.icons
         %li
           %i.map_small
           %p
             GRIMALDO DEL SOLAR 231 OF. 101 <br>
             MIRAFLORES, LIMA.
-  
-    .region-inner
-      %h2.title Datos de contacto
-      %ul.icons
-        %li
-          %i.contact_small
-          %p
-            INFO@LABORALMEDICALPERU.COM
         %li
           %i.phone_small
           %p
@@ -32,12 +23,32 @@
           %i.cellphone_small
           %p
             999857980 | 413*1130
+      %br
+      %h2.title SEDE ICA
+      %ul.icons
+        %li
+          %i.map_small
+          %p
+            José Matías Mazanilla 718 - Ica
+
+          %i.phone_small
+          %p
+            (056) 238152
+          %i.cellphone_small
+          %p
+            991516153
+
 
   
-
-
-
-
+    .region-inner
+      %h2.title CORREO ELECTRÓNICO
+      %ul.icons
+        %li
+          %i.contact_small
+          %p
+            servicioalcliente@laboralmedicalperu.com
+      
+     
 #region-form.container
   .region-title
     %h2.title Escríbenos

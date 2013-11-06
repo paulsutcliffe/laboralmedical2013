@@ -95,6 +95,7 @@ GEM
     friendly_id (4.0.10.1)
       activerecord (>= 3.0, < 4.0)
     fssm (0.2.10)
+    gmaps4rails (2.0.4)
     haml (4.0.3)
       tilt
     haml-rails (0.4)
@@ -212,6 +213,7 @@ GEM
     uglifier (2.2.1)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
+    underscore-rails (1.5.2)
     unicorn (4.6.3)
       kgio (~> 2.6)
       rack
@@ -238,6 +240,7 @@ DEPENDENCIES
   factory_girl_rails (~> 4.2.1)
   faker (~> 1.1.2)
   friendly_id (~> 4.0.9)
+  gmaps4rails
   haml
   haml-rails
   holder_rails
@@ -252,5 +255,6 @@ DEPENDENCIES
   rvm-capistrano
   sass-rails (~> 3.2.3)
   uglifier (>= 1.0.3)
+  underscore-rails
   unicorn
   will_paginate

@@ -7,12 +7,10 @@
 .container
   #alianzas-descripcion.region
     .region-title
-      %h2.title Subítulo
+      %h2.title ALIANZAS ESTRATEGICAS
 
     .region-inner
-      %p 
-        Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, 
-        there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+      %p Para mejor nuestros servicios, Laboral Medical posee fuertes alianzas y convenios con prestigiosas empresas e instituciones.
 
   #alianzas-logos.region
     .region-inner
@@ -26,6 +24,7 @@
         - @alianzas.each do |alianza|
           %tr
             %td= alianza.nombre
+            %td= image_tag alianza.logo_url(:thumb)
             - if current_admin
               %td= link_to 'Editar', edit_alianza_path(alianza)
               %td= link_to 'Eliminar', alianza, :method => :delete, :data => { :confirm => '¿Estás seguro?' }
