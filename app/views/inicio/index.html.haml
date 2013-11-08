@@ -29,6 +29,8 @@
       .region-title
         %h2.title Clientes
         %span.subtitle Confían en Laboral Medical
+        - if current_admin
+          = link_to 'New cliente', new_cliente_path
       - @clientes.each do |cliente|
         .region-inner
           = image_tag cliente.logo_url(:thumb)

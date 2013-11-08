@@ -134,6 +134,8 @@ textarea {@extend .custom-border}
   }
 }
 
+.icon_avion {@include icons-sprite(icon_avion); @include inline-block}
+
 .social-links {
   #main-header & {
     float: right; text-align: right;
@@ -210,3 +212,18 @@ aside {
   }
 }
 
+
+form {
+  input[type="text"], input[type="password"], input[type="email"], textarea {@extend .form-control; margin-bottom: 20px}
+  input[type="submit"] {@extend .btn; @extend .btn-default; @extend .btn-lg; margin-top: 0px}
+}
+#region-form form fieldset {border: 0}
+
+#contacto-title {
+  position: relative; z-index: 100;
+  
+  * {margin-bottom: 0}
+  h2.title {@include absolute(top, left, 80px, 0);
+    i {margin-top: -10px}
+  }
+}

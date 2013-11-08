@@ -10,16 +10,16 @@
     .fields
       .field
         = f.label :nombre
-        = f.text_field :nombre
+        = f.text_field :nombre, placeholder: 'Nombre completo'
       .field
         = f.label :email
-        = f.text_field :email
+        = f.text_field :email, placeholder: 'Ingresar email'
       .field
         = f.label :telefono
-        = f.text_field :telefono
+        = f.text_field :telefono, placeholder: 'Celular, fijo o ambos'
     .fields
       .field
         = f.label :mensaje
-        = f.text_area :mensaje
+        = f.text_area :mensaje, placeholder: 'Déjanos tu mensaje'
       .actions
-        = f.submit 'Save'
+        = f.submit 'Enviar'
