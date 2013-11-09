@@ -49,6 +49,43 @@ module ApplicationHelper
   
 
 
+  # admin controls
+  def admin_controls(edit_text, edit_link, direction)
+    if current_admin
+      "#{'
+        <div class="admin-controls">
+        <div class="btn-group ' + 
+          if (direction === 'up')
+            'dropup'
+          else
+           nil.to_s 
+          end  + '">
+
+
+        <a class="btn btn-edit btn-sm">' + edit_text + '</a> 
+       
+
+        <div class="btn-group">
+          <div class="dropdown">
+            <a class="btn btn-default btn-sm" role="button" data-toggle="dropdown" data-target="#" href="/page.html">
+               <span class="caret"></span>
+            </a>
+ 
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="' + edit_link + '">' + edit_text + '</a></li>
+              <li role="presentation" class="li-delete"></li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      </div>'}".html_safe
+    end
+  end
+
+
+
+
  # def paragraph(post, length)
  #   "#{simple_format(truncate(post, :length => length))}"
  # end

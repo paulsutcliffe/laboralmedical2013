@@ -29,10 +29,16 @@
       .region-title
         %h2.title Clientes
         %span.subtitle Confían en Laboral Medical
+        
         - if current_admin
-          = link_to 'New cliente', new_cliente_path
+          .admin-control.admin-new
+            = link_to 'New cliente', new_cliente_path, class: 'new'
       - @clientes.each do |cliente|
         .region-inner
-          = image_tag cliente.logo_url(:thumb)
+          = link_to image_tag(cliente.logo_url(:thumb)), cliente.link, target: '_blank'
+          = admin_controls('Editar', edit_cliente_path(cliente), 'down')
+          - if current_admin
+            = link_to 'Destroy', cliente, :method => :delete, :data => { :confirm => '¿Estás seguro?' }
+                      
 
 

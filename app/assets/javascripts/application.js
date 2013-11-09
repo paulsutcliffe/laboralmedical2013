@@ -15,7 +15,10 @@
 //= require twitter/bootstrap/transition
 //= require twitter/bootstrap/carousel
 //= require twitter/bootstrap/collapse
+//= require twitter/bootstrap/dropdown
+//= require twitter/bootstrap/button
 //= require holder
 //= require underscore
 //= require gmaps/google
 //= require mapa.js
+//= require scripts.js

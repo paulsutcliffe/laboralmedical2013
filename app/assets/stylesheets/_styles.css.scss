@@ -227,3 +227,18 @@ form {
     i {margin-top: -10px}
   }
 }
+
+
+.admin-control {
+  .new {@extend .btn; @extend .btn-primary; @extend .btn-lg}
+}
+
+.admin-controls {
+  .dropdown-menu {left: auto; right: 0}
+}
+
+.btn-edit {
+  @extend .btn;
+  @extend .btn-success;
+  @extend .btn-lg;
+}
