@@ -174,3 +174,16 @@
 }
 
  
+
+.new #content,
+.edit #content {
+    @extend .col-lg-6;
+    @extend .col-md-10;
+    @extend .col-sm-12;
+    @extend .col-xs-12;
+
+    @extend .col-lg-offset-1;
+}
+#main-footer {
+  float: left; width: 100%; clear:left
+}

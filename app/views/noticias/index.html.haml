@@ -2,16 +2,18 @@
 = encabezado('Blog', '/assets/encabezado.jpg', '/assets/icono-blog.png', false)
 
 
-- if current_admin
-  = link_to 'Nueva Noticia', new_noticia_path
+
 
 #region-blog.container
+  = admin_create('Nueva Noticia', new_noticia_path)  
+
   - @noticias.each_slice(1).each_with_index do |noticia, index|
     - if index == 0
       .region.first
         - noticia.each_with_index do |noticia|
           .region-inner.figure
-            = link_to (image_tag noticia.imagen_url(:regular)), noticia
+            - if noticia.imagen_url
+              = link_to (image_tag noticia.imagen_url(:regular)), noticia
 
           .region-inner
             %h3.title
@@ -23,8 +25,8 @@
             = paragraph_truncate(noticia.contenido, 200)
             = link_to 'Leer Más', noticia, class: 'btn-more'
 
+          = admin_controls('Editar', edit_noticia_path(noticia), 'down')
           - if current_admin
-            = link_to 'Editar', edit_noticia_path(noticia)
             = link_to 'Eliminar', noticia, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }
 
     - else

@@ -229,7 +229,7 @@ form {
 }
 
 
-.admin-control {
+.admin-control { margin-bottom: 30px;
   .new {@extend .btn; @extend .btn-primary; @extend .btn-lg}
 }
 
@@ -242,3 +242,4 @@ form {
   @extend .btn-success;
   @extend .btn-lg;
 }
+

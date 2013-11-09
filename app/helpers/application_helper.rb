@@ -83,6 +83,15 @@ module ApplicationHelper
     end
   end
 
+  # admin create
+  def admin_create(create_text, create_link)
+    if current_admin
+      "#{'<div class="admin-control"> 
+        <a class="new" href="' + create_link +'">' + create_text + '</a>
+      </div>'}".html_safe
+    end
+  end
+
 
 
 
