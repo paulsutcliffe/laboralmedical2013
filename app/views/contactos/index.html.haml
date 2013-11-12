@@ -1,21 +1,19 @@
-%h1 Listing contactos
-
-%table
-  %tr
-    %th Nombre
-    %th Email
-    %th Telefono
-    %th Mensaje
-    %th
-    %th
-    %th
-
-  - @contactos.each do |contacto|
+= encabezado('Lista de Contactos', '/assets/encabezado.jpg', '/assets/icono-consultorias.png', true)
+#region-contactos.container
+  %table
     %tr
-      %td= contacto.nombre
-      %td= contacto.email
-      %td= contacto.telefono
-      %td= contacto.mensaje
-      %td= link_to 'Show', contacto
-      %td= link_to 'Edit', edit_contacto_path(contacto)
-      %td= link_to 'Destroy', contacto, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %th Nombre
+      %th Email
+      %th Telefono
+      %th Mensaje
+      %th
+      %th
+
+    - @contactos.each do |contacto|
+      %tr
+        %td= contacto.nombre
+        %td= contacto.email
+        %td= contacto.telefono
+        %td= contacto.mensaje
+        %td= l contacto.created_at, format: :short
+        %td= link_to 'Eliminar', contacto, :method => :delete, :data => { :confirm => 'Are you sure?' }

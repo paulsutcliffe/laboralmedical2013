@@ -1,6 +1,11 @@
 = encabezado('Blog', '/assets/encabezado.jpg', '/assets/icono-blog.png', true)
 
+
 #region-blog-show.container
+  - if current_admin
+    .admin-control
+      = link_to 'Editar', edit_noticia_path(@noticia), class: 'new'
+
   .region
     .region-inner
       %h2.title
@@ -26,8 +31,3 @@
         %i.icon_post
         %h3.title Título
         %span.date 10 de julio 
-  
-- if current_admin
-  = link_to 'Edit', edit_noticia_path(@noticia)
-  \|
-  = link_to 'Back', noticias_path

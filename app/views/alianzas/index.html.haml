@@ -3,7 +3,7 @@
 
 
 .container
-  = admin_create('Crear Alianza', new_alianza_path)
+  = admin_create('Nueva Alianza', new_alianza_path)
 
   #alianzas-descripcion.region
     .region-title
@@ -14,17 +14,10 @@
 
   #alianzas-logos.region
     .region-inner
-      %table
-        %tr
-          %th Nombre
+      - @alianzas.each do |alianza|
+        .region-inner
+          = alianza.nombre
+          = image_tag alianza.logo_url(:thumb)
+          = admin_controls('Editar', edit_alianza_path(alianza), 'down')
           - if current_admin
-            %th
-            %th
-      
-        - @alianzas.each do |alianza|
-          %tr
-            %td= alianza.nombre
-            %td= image_tag alianza.logo_url(:thumb)
-            - if current_admin
-              %td= link_to 'Editar', edit_alianza_path(alianza)
-              %td= link_to 'Eliminar', alianza, :method => :delete, :data => { :confirm => '¿Estás seguro?' }
+            = link_to 'Eliminar', alianza, :method => :delete, :data => { :confirm => '¿Estás seguro?' }

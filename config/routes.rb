@@ -10,7 +10,9 @@ Laboralmedical2013::Application.routes.draw do
     resources :noticias
   end
 
-  resources :categorias
+  resources :categorias do
+    resources :servicios
+  end
 
   resources :contactos
 

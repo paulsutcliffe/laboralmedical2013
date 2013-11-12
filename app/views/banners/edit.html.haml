@@ -1,7 +1,4 @@
-%h1 Editing banner
+= encabezado('Editar Banner', '/assets/encabezado.jpg', '/assets/icono-consultorias.png', true)
 
-= render 'form'
-
-= link_to 'Show', @banner
-\|
-= link_to 'Back', banners_path
+#region-banners.container
+  = render 'form'

@@ -1,11 +1,14 @@
-= encabezado('Consultorías', '/assets/encabezado.jpg', '/assets/icono-consultorias.png', true)
+= encabezado('Consultorías', '/assets/encabezado.jpg', '/assets/icono-consultorias.png', false)
 
 
 
 #region-consultorias.container
   .region
     .region-inner
-      %h2.title Servicios
+      %h2.title Consultoria
+      - if current_admin
+        .admin-control
+          = link_to 'Nueva Consultoría', { controller: 'servicios', action: 'new', :categoria_id => 2 }, class: 'new'
       %ul
         = render('lista')
     .region-inner

@@ -20,5 +20,8 @@
       = render 'video'
     .region-inner
       %h2.title Servicios
+      - if current_admin
+        .admin-control
+          = link_to 'Nuevo Servicio', { controller: 'servicios', action: 'new', :categoria_id => 1 }, class: 'new'
       %ul
         = render('lista')

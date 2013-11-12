@@ -173,18 +173,45 @@
   }
 }
 
- 
-
-
-.new.admin-logged-in #content,
-.edit.admin-logged-in #content {
+// banners_path
+#region-banners {
+  .region-inner {
     @extend .col-lg-6;
-    @extend .col-md-10;
-    @extend .col-sm-12;
+    @extend .col-md-6;
+    @extend .col-sm-6;
     @extend .col-xs-12;
-
-    @extend .col-lg-offset-1;
+  }
 }
+
+// clientes_path
+
+#region-alianzas {
+  .region-inner {
+    @extend .col-lg-6;
+    @extend .col-md-6;
+    @extend .col-sm-6;
+    @extend .col-xs-12;
+  }
+}
+
+#region-contactos {
+  .region-inner {
+    @extend .col-lg-6;
+    @extend .col-md-6;
+    @extend .col-sm-6;
+    @extend .col-xs-12;
+  }
+}
+
+//.new.admin-logged-in #content,
+//.edit.admin-logged-in #content {
+//    @extend .col-lg-6;
+//    @extend .col-md-10;
+//    @extend .col-sm-12;
+//    @extend .col-xs-12;
+//
+//    @extend .col-lg-offset-1;
+//}
 #contactos.new #content {width: 100%; margin-left: 0; padding: 0}
 
 #main-footer {
