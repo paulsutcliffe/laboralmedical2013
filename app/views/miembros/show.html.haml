@@ -4,14 +4,13 @@
 #region-staff-show.container
   .region
     .region-inner
+      = image_tag @miembro.foto_url(:full)
+
       %h3.title
         = @miembro.nombre
       %h4.subtitle
-      = @miembro.puesto
+        = @miembro.puesto
 
     .region-inner
       = paragraph(@miembro.descripcion)
 
-      = link_to 'Edit', edit_miembro_path(@miembro)
-      \|
-      = link_to 'Back', miembros_path

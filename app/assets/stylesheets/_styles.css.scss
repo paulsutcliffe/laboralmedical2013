@@ -32,9 +32,12 @@
 }
 
 #main-footer {
-  background: black; padding: 40px 0; text-transform: uppercase;
-  li { text-align: center; color: white}
-  a {color: white; word-wrap: break-word}
+  background: black; padding: 40px 0 5px; text-transform: uppercase;
+  li { text-align: center; }
+  * {color: #959595}
+  a { word-wrap: break-word}
+  i {margin-bottom: 15px !important}
+  .region-title, .region-inner {margin-bottom: 0}
 }
 
 #carousel-generic {
@@ -177,7 +180,15 @@ textarea {@extend .custom-border}
 #region-staff {
   .region-inner {
     text-align: center;
+    img {@extend .img-circle; overflow: hidden}
+    h3, h4 {margin-bottom: 8px}
   }
+}
+#region-staff-show {
+  h3.title,
+  h4.subtitle {text-align: center}
+  h3.title {font-weight: bold}
+  img {@extend .img-circle; overflow: hidden}
 }
 
 .reel,

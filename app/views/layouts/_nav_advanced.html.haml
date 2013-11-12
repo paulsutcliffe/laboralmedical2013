@@ -18,5 +18,8 @@
       = menu_li('Staff', 'miembros', miembros_path)
       = menu_li('Alianzas', 'alianzas', alianzas_path)
       = menu_li('Contacto', 'contactos', new_contacto_path)
+      - if current_admin
+        %li
+          = link_to 'Cerrar Sesión', destroy_admin_session_path, :method => :delete
       
   / /.navbar-collapse

@@ -16,13 +16,13 @@ def bodyclass
   end
 
 
-#  if current_admin
-#    @admin = 'logged-in'
-#  else
-#    @admin = 'not-logged-in'
-#  end
+  if current_admin
+    @admin = 'admin-logged-in'
+  else
+    @admin = 'not-logged-in'
+  end
 
-  @bodyclass = @action + ' ' + @front #+ ' ' + @admin
+  @bodyclass = @action + ' ' + @front + ' ' + @admin
 end
 
 

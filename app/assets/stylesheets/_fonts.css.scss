@@ -1,7 +1,7 @@
 
 
 body {font-family: 'Lato'}
-h1, h2, h3, h4, h5, h6 {margin: 0; line-height: 100%}
+h1, h2, h3, h4, h5, h6 {margin: 0; line-height: 100%; font-family: 'Lato'}
 
 
 h2.title, .subtitle {text-transform: uppercase;
@@ -13,9 +13,9 @@ h2.title {margin-bottom: 20px}
 h3.title {font-size: $subtitle; font-weight: 300; text-transform: uppercase; margin: 0}
 
 h2.title a,
-h3.title a {color: black}
+h3.title a {color: black; font-weight: bold}
 
-.subtitle {font-size: $subtitle; margin-bottom: 15px; display: block}
+.subtitle {font-size: $subtitle; margin-bottom: 15px; display: block; font-weight: 300}
 .region-title {
   & > .title {text-transform: uppercase}
 }
@@ -27,7 +27,7 @@ h3.title a {color: black}
 
 #region-staff {h3 {text-transform: uppercase; a {color: black}}}
 
-p, #content li {font-size: $paragraph; margin-bottom: 10px; text-align: justify}
+p, #content li {font-size: $paragraph; margin-bottom: 10px; text-align: justify; color: black}
 
 #main-footer {
   * {

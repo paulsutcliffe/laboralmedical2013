@@ -62,7 +62,7 @@ module ApplicationHelper
           end  + '">
 
 
-        <a class="btn btn-edit btn-sm">' + edit_text + '</a> 
+        <a class="btn btn-edit btn-sm" href="' + edit_link + '">' + edit_text + '</a> 
        
 
         <div class="btn-group">

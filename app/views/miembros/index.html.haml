@@ -11,14 +11,15 @@
     .region
       - miembro.each do |miembro|
         .region-inner
-          = link_to image_tag(miembro.foto_url(:thumb)), miembro
+          = link_to image_tag(miembro.foto_url(:regular)), miembro
           %h3.title
             = link_to miembro.nombre , miembro
           %h4.subtitle
             = miembro.puesto
+          = link_to 'Ver más', miembro, class: 'btn-more'
+
           = admin_controls('Editar', edit_miembro_path(miembro), 'down')
           - if current_admin
-            = link_to 'Editar', edit_miembro_path(miembro)
             = link_to 'Eliminar', miembro, :method => :delete, :data => { :confirm => '¿Estás seguro?' }
 
 
