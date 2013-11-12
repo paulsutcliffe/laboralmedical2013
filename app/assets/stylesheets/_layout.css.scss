@@ -202,6 +202,14 @@
     @extend .col-xs-12;
   }
 }
+#region-devise {
+  .region-inner {
+    @extend .col-lg-6;
+    @extend .col-md-6;
+    @extend .col-sm-6;
+    @extend .col-xs-12;
+  }
+}
 
 //.new.admin-logged-in #content,
 //.edit.admin-logged-in #content {

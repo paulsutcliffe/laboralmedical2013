@@ -7,6 +7,8 @@ gem 'rails', '3.2.14'
 
 gem 'mysql2'
 
+gem 'tinymce-rails', '3.5.8'
+
 gem 'gmaps4rails'
 gem 'underscore-rails'
 

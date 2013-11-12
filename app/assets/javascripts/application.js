@@ -22,3 +22,6 @@
 //= require gmaps/google
 //= require mapa.js
 //= require scripts.js
+//= require tinymce
+
+
