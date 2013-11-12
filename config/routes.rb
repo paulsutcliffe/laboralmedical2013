@@ -1,11 +1,11 @@
 Laboralmedical2013::Application.routes.draw do
 
-  devise_for :admins
+  devise_for :admins, :path => "cms", :path_names => { :sign_in => 'ingresar', :sign_out => 'salir', :password => 'secreto', :confirmation => 'verificacion', :unlock => 'desbloquear', :registration => 'registro', :sign_up => 'inscribirse' }
 
   match '/servicios' => 'categorias#servicios', via: :get
 
   match '/consultorias' => 'categorias#consultorias', via: :get
-  
+
   scope '/blog' do
     resources :noticias
   end
