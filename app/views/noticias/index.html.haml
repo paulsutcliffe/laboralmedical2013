@@ -19,11 +19,11 @@
             %h3.title
               = link_to noticia.titulo , noticia
             %span.date
-              10 de julio de 2013
+              = l noticia.created_at, format: :supershort
             %span.subtitle
               = noticia.subtitulo
-            = paragraph_truncate(noticia.contenido, 200)
-            = link_to 'Leer Más', noticia, class: 'btn-more'
+            = paragraph_truncate(raw(noticia.contenido), 200)
+            =# link_to 'Leer Más', noticia, class: 'btn-more'
 
           = admin_controls('Editar', edit_noticia_path(noticia), 'down')
           - if current_admin
@@ -39,11 +39,11 @@
             %h3.title
               = link_to noticia.titulo , noticia
             %span.date
-              10 de julio de 2013
+              = l noticia.created_at, format: :supershort
             %span.subtitle
               = noticia.subtitulo
-            = paragraph_truncate(noticia.contenido, 200)
-            = link_to 'Leer Más', noticia, class: 'btn-more'
+            = paragraph_truncate(raw(noticia.contenido), 200)
+            =# link_to 'Leer Más', noticia, class: 'btn-more'
 
           = admin_controls('Editar', edit_noticia_path(noticia), 'down')
           - if current_admin

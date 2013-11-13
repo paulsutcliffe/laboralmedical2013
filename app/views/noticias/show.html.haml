@@ -17,7 +17,7 @@
     
       = image_tag @noticia.imagen_url(:regular), class: 'image-border img-responsive'
 
-      = paragraph(@noticia.contenido)
+      = paragraph(raw(@noticia.contenido))
 
     %aside.region.icon
       .region-title

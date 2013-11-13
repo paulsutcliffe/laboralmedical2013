@@ -1,5 +1,5 @@
 class Miembro < ActiveRecord::Base
-  attr_accessible :descripcion, :nombre, :puesto, :foto
+  attr_accessible :descripcion, :nombre, :puesto, :foto, :apellido
 
 extend FriendlyId
   friendly_id :nombre, use: :slugged

@@ -16,7 +16,7 @@
     %tr
       %td= image_tag servicio.icono_url(:thumb)
       %td= servicio.nombre
-      %td= servicio.descripcion
+      %td= raw(servicio.descripcion)
       - if current_admin
         %td= link_to 'Editar', edit_servicio_path(servicio)
         %td= link_to 'Eliminar', servicio, :method => :delete, :data => { :confirm => '¿Estás seguro?' }

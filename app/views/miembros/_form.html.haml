@@ -10,6 +10,9 @@
     = f.label :nombre
     = f.text_field :nombre
   .field
+    = f.label :apellido
+    = f.text_field :apellido
+  .field
     = f.label :puesto
     = f.text_field :puesto
   .field
@@ -19,4 +22,4 @@
     = f.label :descripcion
     = f.text_area :descripcion, class: 'tinymce'
   .actions
-    = f.submit 'Save'
+    = f.submit 'Guardar'

@@ -70,6 +70,7 @@ ActiveRecord::Schema.define(:version => 20131021211719) do
 
   create_table "miembros", :force => true do |t|
     t.string   "nombre"
+    t.string   "apellido"
     t.string   "puesto"
     t.string   "foto"
     t.text     "descripcion"

@@ -17,6 +17,6 @@
     = f.file_field :imagen
   .field
     = f.label :contenido
-    = f.text_area :contenido
+    = f.text_area :contenido, class: 'tinymce'
   .actions
     = f.submit 'Guardar'
