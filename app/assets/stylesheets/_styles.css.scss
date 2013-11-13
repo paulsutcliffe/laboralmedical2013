@@ -3,6 +3,7 @@
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {border: 0; margin: 0}
 
 .navbar-default {
+  background: none;
   .navbar-nav {
     & > li {
       margin-left: 20px;
@@ -53,7 +54,7 @@ section {
     img {width: 100%}
     .carousel-caption {
       bottom: auto; top: 30px; left: 8%;
-      p {font-size: $caption; text-align: left; font-weight: 900}
+      p {font-size: $caption; text-align: left; font-weight: 900; color: white}
     }
   }
 }
@@ -112,6 +113,7 @@ $icons-sprite-dimensions: true;
  .social-links li {text-align: center}
 
 .icon i.icon_post {@include icons-sprite(icon_post); @extend .image-left}
+i.lupa {@include icons-sprite(lupa); display: block}
 
 input,
 textarea {@extend .custom-border}
@@ -173,22 +175,43 @@ textarea {@extend .custom-border}
 
 #region-form {
   form {@extend .custom-border; @extend .clearfix;
-    fieldset {@extend .well}
+    fieldset {@extend .well; background: none}
   }
+}
+
+.fb-like-box {
+  width: 100% !important;
+  * {width: 100% !important}
 }
 
 #region-staff {
   .region-inner {
-    text-align: center;
-    img {@extend .img-circle; overflow: hidden}
-    h3, h4 {margin-bottom: 8px}
+    .item-hover-wrapper {position: relative; padding: 10px 0;
+      text-align: center; border: 1px solid #ccc; border-radius: 7px;
+      img {@extend .img-circle; overflow: hidden; margin-bottom: 10px}
+      h3, h4 {margin-bottom: 8px}
+    }
   }
 }
+
+.region-inner {
+  .item-hover {@include absolute(left, top, 0, 0); width: 100%; height: 100%; display: none; border-radius: 7px;
+  background: rgba(255,255,255,0.8)}
+  &:hover .item-hover {display: block}
+  .btn-more {@include absolute(left, bottom, 50%, 10px); margin-left: -52px; padding: 0 10px; background: #ebebeb; border: 1px solid #ccc}
+}
+
 #region-staff-show {
   h3.title,
   h4.subtitle {text-align: center}
   h3.title {font-weight: bold}
   img {@extend .img-circle; overflow: hidden}
+}
+
+#alianzas-logos {
+  .region-inner {text-align: center; position: relative;
+    img {margin-bottom: 10px}
+  }
 }
 
 .reel,
@@ -226,7 +249,7 @@ aside {
 
 form {
   input[type="text"], input[type="password"], input[type="email"], textarea {@extend .form-control; margin-bottom: 20px}
-  input[type="submit"] {@extend .btn; @extend .btn-default; @extend .btn-lg; margin-top: 0px}
+  input[type="submit"] {@extend .btn; @extend .btn-default; @extend .btn-lg; margin-top: 0px; float: right}
 }
 #region-form form fieldset {border: 0}
 

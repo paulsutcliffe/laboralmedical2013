@@ -13,11 +13,12 @@
       %p Para mejor nuestros servicios, Laboral Medical posee fuertes alianzas y convenios con prestigiosas empresas e instituciones.
 
   #alianzas-logos.region
-    .region-inner
-      - @alianzas.each do |alianza|
-        .region-inner
-          = alianza.nombre
-          = image_tag alianza.logo_url(:thumb)
-          = admin_controls('Editar', edit_alianza_path(alianza), 'down')
-          - if current_admin
-            = link_to 'Eliminar', alianza, :method => :delete, :data => { :confirm => '¿Estás seguro?' }
+    - @alianzas.each_slice(4) do |alianza|
+      .region
+        - alianza.each do |alianza|
+          .region-inner
+            = image_tag alianza.logo_url(:thumb)
+            %h3.title= alianza.nombre
+            = admin_controls('Editar', edit_alianza_path(alianza), 'down')
+            - if current_admin
+              = link_to 'Eliminar', alianza, :method => :delete, :data => { :confirm => '¿Estás seguro?' }

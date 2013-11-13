@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(:version => 20131021211719) do
 
   create_table "alianzas", :force => true do |t|
     t.string   "nombre"
+    t.string   "logo"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

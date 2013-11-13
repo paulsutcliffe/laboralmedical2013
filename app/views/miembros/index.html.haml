@@ -11,12 +11,17 @@
     .region
       - miembro.each do |miembro|
         .region-inner
-          = link_to image_tag(miembro.foto_url(:regular)), miembro
-          %h3.title
-            = link_to miembro.nombre , miembro
-          %h4.subtitle
-            = miembro.puesto
-          = link_to 'Ver más', miembro, class: 'btn-more'
+          .item-hover-wrapper
+            = link_to image_tag(miembro.foto_url(:regular)), miembro
+            %h3.title
+              = link_to miembro.nombre , miembro
+              %br
+              = link_to miembro.nombre , miembro
+            %h4.subtitle
+              = miembro.puesto
+            .item-hover
+              %i.lupa
+              = link_to 'Ver más', miembro, class: 'btn-more'
 
           = admin_controls('Editar', edit_miembro_path(miembro), 'down')
           - if current_admin
