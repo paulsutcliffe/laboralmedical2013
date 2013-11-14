@@ -11,7 +11,7 @@
       %h2.title
         = @noticia.titulo
       %span.date
-        20 de noviembre 
+        = l @noticia.created_at, format: :supershort
       %span.subtitle
       = @noticia.subtitulo
     
@@ -22,12 +22,8 @@
     %aside.region.icon
       .region-title
         %h2.title Posts Recientes
-
-      .region-inner
-        %i.icon_post
-        %h3.title Título
-        %span.date 10 de julio 
-      .region-inner
-        %i.icon_post
-        %h3.title Título
-        %span.date 10 de julio 
+      - @recientes.each do |reciente|
+        .region-inner
+          %i.icon_post
+          %h3.title= link_to truncate(reciente.titulo, length: 30), reciente
+          %span.date= l reciente.created_at, format: :supershort
