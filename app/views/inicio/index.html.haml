@@ -5,28 +5,27 @@
   = admin_create('Nuevo Banner', new_banner_path)
   .region
     .region-inner
-      = holder_tag '140x140', '140x140', 'social'
+      = image_tag '/assets/icono-laboralmedical.png'
       %h2.title Laboral Medical
-      %span.subtitle 
+      %span.subtitle
       %p Somos una organización especializada en temas de salud ocupacional, además brindamos capacitaciones y asesorías en temas de selección de personal dirigida al profesional, organizaciones y público en general buscando que nuestros clientes sean cada vez más productivos.
     .region-inner
-      = holder_tag '140x140', '140x140', 'social'
+      = image_tag '/assets/icono-honestidad.png'
       %h2.title Honestidad, Calidad y Compromiso
-      %span.subtitle 
+      %span.subtitle
       %p Realizamos nuestro trabajo diario en un ambiente de confianza, traducido en el respaldo, seguridad y credibilidad de nuestros clientes. Estamos comprometidos a ofrecer calidad en el servicio de Salud Ocupacional durante la evaluación de los colaboradores confiados con el propósito de prevenir riesgos en su salud.
     .region-inner
-      = holder_tag '140x140', '140x140', 'social'
+      = image_tag '/assets/icono-file-medico.png'
       %h2.title Alcance
-      %span.subtitle 
+      %span.subtitle
       %p Además, brindamos servicios de asesoría y consultoría en el área de Gestión de Salud Ocupacional, planeación, diseño, implementación de Tópicos de Salud, Chequeos Médicos Ocupacionales de ingreso, rutina y retiro, despistajes masivos, y capacitaciones.
     .region-inner
-      = holder_tag '140x140', '140x140', 'social'
+      = image_tag '/assets/icono-atencion.png'
       %h2.title Atención Personalizada
-      %span.subtitle 
+      %span.subtitle
       %p Nos destacamos por tener una atención totalmente personalizada con cada uno de nuestros clientes y sus colaboradores, convirtiéndonos en sus socios estratégicos.
 
 = render 'shared/siguenos_facebook'
-
 
 %section#region-clientes.region-alt
   .container
@@ -34,7 +33,7 @@
       .region-title
         %h2.title Clientes
         %span.subtitle Confían en Laboral Medical
-        
+
         - if current_admin
           .admin-control
             = admin_create('Nuevo cliente', new_cliente_path)
@@ -44,6 +43,3 @@
           = admin_controls('Editar', edit_cliente_path(cliente), 'down')
           - if current_admin
             = link_to 'Eliminar', cliente, :method => :delete, :data => { :confirm => '¿Estás seguro?' }
-                      
-
-
