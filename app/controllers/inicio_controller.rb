@@ -1,6 +1,6 @@
 class InicioController < ApplicationController
   def index
-    @clientes = Cliente.limit(4)
+    @clientes = Cliente.random
     @banners = Banner.all
   end
 end

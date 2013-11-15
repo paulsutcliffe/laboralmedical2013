@@ -10,18 +10,35 @@
     %meta(http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1")
     %meta(name="viewport" content="width=device-width, initial-scale=1.0")
 
-    %title= content_for?(:title) ? yield(:title) : "Laboral Medical"
+    %title= content_for?(:title) ? yield(:title) : "Laboral Medical | Salud Ocupacional"
+    %meta(name="description" content="Somos una organización especializada que brinda servicios enfocados en temas de salud ocupacional, capacitaciones, selección de personal dirigida al profesional, organizaciones y público en general buscando que nuestros clientes sean más productivos.")
+    %meta(name="keywords" content="Chequeos médicos ocupacionales, Implementación de sistemas de gestión, capacitaciones.")
+    %meta(name="robot" content="index,follow")
+    %meta(name="copyright" content="Todos los derechos reservados &copy; Laboral Medical.")
+    %meta(name="author" content="Kosmyka.com")
+    %meta(name="language" content="Spanish")
+    %meta(name="revisit-after" content="1")
+    %meta(name="googlebot" content="index,follow")
+    %meta(name="city" content="Lima")
+    %meta(name="country" content="Peru")
+    %meta(name="state" content="Lima")
+    %meta(name="zip code" content="Lima 18")
+    %meta(name="subject" content="Laboral Medical")
+    %meta(name="geo.position" content="-9;-75")
+    %meta(name="geo.country" content="PE")
+    %meta(name="geo.region" content="PE-LIM")
+    %meta(name="geo.placename" content="Miraflores")
     = csrf_meta_tags
     / Le HTML5 shim, for IE6-8 support of HTML elements
     /[if lt IE 9]
       = javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"
-    = javascript_include_tag 'https://maps.googleapis.com/maps/api/js?key=AIzaSyA1CU_HVQkZe6Y7_VhByAV0zgKGpsKitYo&sensor=false'
+    = javascript_include_tag 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBS10UVR-QYWWQilit2l3T-QtarxQERAo4&sensor=false'
     = javascript_include_tag '//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js'
     = stylesheet_link_tag "application", :media => "all"
-    = favicon_link_tag '/ico/sarcay-icon-144.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144'
-    = favicon_link_tag '/ico/sarcay-icon-114.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '114x114'
-    = favicon_link_tag '/ico/sarcay-icon-72-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '72x72'
-    = favicon_link_tag '/ico/sarcay-icon-57.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png'
+    = favicon_link_tag '/ico/laboralmedical-icon-144.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144'
+    = favicon_link_tag '/ico/laboralmedical-icon-114.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '114x114'
+    = favicon_link_tag '/ico/laboralmedical-icon-72-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '72x72'
+    = favicon_link_tag '/ico/laboralmedical-icon-57.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png'
     = favicon_link_tag '/ico/favicon.ico', :rel => 'shortcut icon'
 
     = stylesheet_link_tag "application"

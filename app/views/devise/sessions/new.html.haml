@@ -1,4 +1,4 @@
-= encabezado('Iniciar Sesion', '/assets/encabezado.jpg', '/assets/icono-cms.png', false)
+= encabezado('Iniciar Sesión', '/assets/encabezado.jpg', '/assets/icono-cms.png', false)
 
 #region-devise.container
   = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
@@ -7,7 +7,7 @@
       %br/
       = f.email_field :email, :autofocus => true
     %div
-      = f.label :password, 'Contraseña' 
+      = f.label :password, 'Contraseña'
       %br/
       = f.password_field :password
     - if devise_mapping.rememberable?
