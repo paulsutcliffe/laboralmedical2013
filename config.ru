@@ -4,10 +4,10 @@
 require 'unicorn/worker_killer'
 
 # Max requests per worker
-use Unicorn::WorkerKiller::MaxRequests, 3072, 4096
+use Unicorn::WorkerKiller::MaxRequests, 10240 + Random.rand(10240)
 
 # Max memory size (RSS) per worker
-use Unicorn::WorkerKiller::Oom, (192*(1024**2)), (256*(1024**2))
+use Unicorn::WorkerKiller::Oom, (96 + Random.rand(32)) * 1024**2
 
 require ::File.expand_path('../config/environment',  __FILE__)
 run Laboralmedical2013::Application
