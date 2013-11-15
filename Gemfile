@@ -39,7 +39,7 @@ gem "capistrano"
 
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
                               :github => 'anjlab/bootstrap-rails'
-
+gem 'unicorn-worker-killer'
 gem 'holder_rails'
 gem "rvm-capistrano"
 gem "haml"
