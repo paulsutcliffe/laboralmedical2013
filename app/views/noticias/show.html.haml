@@ -25,5 +25,6 @@
       - @recientes.each do |reciente|
         .region-inner
           %i.icon_post
-          %h3.title= link_to truncate(reciente.titulo, length: 30), reciente
-          %span.date= l reciente.created_at, format: :supershort
+          .text-wrapper
+            %h3.title= link_to truncate(reciente.titulo, length: 30), reciente
+            %span.date= l reciente.created_at, format: :supershort

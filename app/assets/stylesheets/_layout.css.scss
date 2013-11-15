@@ -120,10 +120,17 @@
 
 #region-staff-show  {
   .region-inner {
-    @extend .col-lg-6;
-    @extend .col-md-6;
-    @extend .col-sm-6;
-    @extend .col-xs-6;
+    @extend .col-lg-5;
+    @extend .col-md-5;
+    @extend .col-sm-5;
+    @extend .col-xs-5;
+  }
+
+  .region-inner.description {
+    @extend .col-lg-7;
+    @extend .col-md-7;
+    @extend .col-sm-7;
+    @extend .col-xs-7;
   }
 }
 

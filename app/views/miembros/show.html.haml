@@ -3,14 +3,16 @@
 
 #region-staff-show.container
   .region
-    .region-inner
+    .region-inner.picture
       = image_tag @miembro.foto_url(:full)
 
       %h3.title
         = @miembro.nombre
+        %br
+        = @miembro.apellido
       %h4.subtitle
         = @miembro.puesto
 
-    .region-inner
+    .region-inner.description
       = paragraph(raw(@miembro.descripcion))
 
