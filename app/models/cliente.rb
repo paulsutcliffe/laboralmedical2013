@@ -4,7 +4,7 @@ class Cliente < ActiveRecord::Base
   mount_uploader :logo, IconoUploader
 
   def self.random
-    self.limit(4).offset(rand(self.count))
+    self.all.sample(4)
   end
 
 end
