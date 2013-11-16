@@ -10,11 +10,11 @@
       & > a, & > span {text-transform: uppercase; padding: 0}
       &.last {
         a, span {padding-right: 0}
-      }  
+      }
     }
   }
-  @media (max-width:640px) { 
-    .navbar-collapse.collapsing, 
+  @media (max-width:640px) {
+    .navbar-collapse.collapsing,
     .navbar-collapse.in {
       li {
         margin: 0 0 1px; display: block;
@@ -68,7 +68,7 @@ section {
 
 .encabezado {
   @extend .default-bottom;
-  .container { 
+  .container {
     position: relative;
     h2 {@include absolute(left, top, 0, 0); margin-top: 8%}
     .btn-back {@include absolute(right, top, 0, 0); margin-top: 9%}
@@ -180,6 +180,10 @@ textarea {@extend .custom-border}
   }
 }
 
+#contactos textarea.form-control, form textarea {
+  height: 192px;
+}
+
 .fb-like-box {
   width: 100% !important;
   * {width: 100% !important}
@@ -193,7 +197,7 @@ textarea {@extend .custom-border}
       h3, h4 {margin-bottom: 8px}
       &:hover {border-color: #a7d0f5; img {opacity: 0.5}}
       .lupa {@include absolute(left, top, 50%, 50px); margin-left: -24px}
-      
+
     }
   .btn-more {@include absolute(left, bottom, 50%, 10px); margin-left: -52px; padding: 0 10px; background: #ebebeb; border: 1px solid #ccc}
   }
@@ -261,7 +265,7 @@ form {
 
 #contacto-title {
   position: relative; z-index: 100;
-  
+
   * {margin-bottom: 0}
   h2.title {@include absolute(top, left, 80px, 0);
     i {margin-top: -10px}
