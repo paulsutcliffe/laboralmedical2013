@@ -1,11 +1,17 @@
+- content_for :javascript do
+  = javascript_include_tag 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBS10UVR-QYWWQilit2l3T-QtarxQERAo4&sensor=false'
+  = javascript_include_tag '//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js'
+  = javascript_include_tag 'gmaps_google.js'
+  = javascript_include_tag 'underscore.js'
+  = javascript_include_tag 'mapa.js'
 
 #contacto-title.container
   .region-title
-    %h2.title 
-      Contacto 
+    %h2.title
+      Contacto
       %i.icon_avion
 
-.map-wrapper 
+.map-wrapper
   = render '/shared/mapa'
 
 #region-address.container
@@ -42,7 +48,7 @@
             991516153
 
 
-  
+
     .region-inner
       %h2.title CORREO ELECTRÓNICO
       %ul.icons
@@ -50,8 +56,8 @@
           %i.contact_small
           %p
             servicioalcliente@laboralmedicalperu.com
-      
-     
+
+
 #region-form.container
   .region-title
     %h2.title Escríbenos
