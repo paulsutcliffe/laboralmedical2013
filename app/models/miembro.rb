@@ -1,7 +1,9 @@
 class Miembro < ActiveRecord::Base
-  attr_accessible :descripcion, :nombre, :puesto, :foto, :apellido
+  attr_accessible :descripcion, :nombre, :puesto, :foto, :apellido, :posicion
 
-extend FriendlyId
+  default_scope order('posicion ASC')
+
+  extend FriendlyId
   friendly_id :nombre, use: :slugged
 
   mount_uploader :foto, FotoUploader

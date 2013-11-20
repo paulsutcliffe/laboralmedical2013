@@ -12,5 +12,8 @@
   .field
     = f.label :logo
     = f.file_field :logo
+  .field
+    = f.label :posicion, 'Posición'
+    = f.select :posicion, options_for_select(0..Alianza.all.count)
   .actions
     = f.submit 'Guardar'

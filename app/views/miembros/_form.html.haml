@@ -21,5 +21,8 @@
   .field
     = f.label :descripcion
     = f.text_area :descripcion, class: 'tinymce'
+  .field
+    = f.label :posicion, 'Posición'
+    = f.select :posicion, options_for_select(0..Miembro.all.count)
   .actions
     = f.submit 'Guardar'
