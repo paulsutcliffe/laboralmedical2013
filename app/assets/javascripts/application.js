@@ -17,6 +17,7 @@
 //= require twitter/bootstrap/collapse
 //= require twitter/bootstrap/dropdown
 //= require twitter/bootstrap/button
+//= require holder
 //= require scripts.js
 //= require tinymce
 
