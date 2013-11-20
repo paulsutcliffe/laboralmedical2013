@@ -17,8 +17,6 @@
 //= require twitter/bootstrap/collapse
 //= require twitter/bootstrap/dropdown
 //= require twitter/bootstrap/button
-//= require underscore
-//= require gmaps/google
 //= require scripts.js
 //= require tinymce
 
