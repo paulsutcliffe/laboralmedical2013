@@ -173,6 +173,10 @@ textarea {@extend .custom-border}
   .region-inner {text-align: center}
 }
 
+.icon-wrapper {
+  img {float: none !important; margin: 0 !important}
+  text-align: center; @extend .image-left;
+}
 
 #region-form {
   form {@extend .custom-border; @extend .clearfix;

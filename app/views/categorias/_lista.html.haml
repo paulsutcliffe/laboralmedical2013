@@ -1,6 +1,7 @@
 - @servicios.each do |servicio|
   %li
-    = image_tag servicio.icono_url(:thumb_servicios)
+    .icon-wrapper
+      = image_tag servicio.icono_url(:thumb_servicios)
     .text-wrapper
       %h3.title
         = servicio.nombre
