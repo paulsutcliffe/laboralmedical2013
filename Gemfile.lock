@@ -95,7 +95,6 @@ GEM
     friendly_id (4.0.10.1)
       activerecord (>= 3.0, < 4.0)
     fssm (0.2.10)
-    gmaps4rails (2.0.4)
     haml (4.0.3)
       tilt
     haml-rails (0.4)
@@ -244,7 +243,6 @@ DEPENDENCIES
   factory_girl_rails (~> 4.2.1)
   faker (~> 1.1.2)
   friendly_id (~> 4.0.9)
-  gmaps4rails
   haml
   haml-rails
   holder_rails
