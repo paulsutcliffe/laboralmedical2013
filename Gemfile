@@ -9,7 +9,6 @@ gem 'mysql2'
 
 gem 'tinymce-rails', '3.5.8'
 
-gem 'gmaps4rails'
 gem 'underscore-rails'
 gem 'sass-rails',   '~> 3.2.3'
 # Gems used only for assets and not required

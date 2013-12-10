@@ -18,4 +18,5 @@
 //= require twitter/bootstrap/dropdown
 //= require twitter/bootstrap/button
 //= require scripts.js
+//= require contactos.js.coffee
 //= require tinymce
