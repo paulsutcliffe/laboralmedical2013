@@ -41,9 +41,12 @@
   .region-inner {
     @extend .col-lg-6;
     @extend .col-md-6;
-    @extend .col-sm-6;
+    @extend .col-sm-12;
     @extend .col-xs-12;
   }
+    img{
+    float: none !important;
+    }
 }
 
 #region-clientes {
@@ -108,6 +111,11 @@
   }
 }
 
+iframe{
+  max-width: 100%;
+  min-width: 100%;
+  width: 100%;
+}
 // miembros_path
 #region-staff {
   .region-inner {

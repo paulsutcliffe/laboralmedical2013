@@ -62,7 +62,10 @@ section {
 #home-productos {
   .region-inner {
     p {overflow: hidden}
-    img {margin-top: 3px; @extend .image-left}
+    img {
+      margin-top: 3px;
+      float: left;  
+    }
   }
 }
 
@@ -174,7 +177,7 @@ textarea {@extend .custom-border}
 }
 
 .icon-wrapper {
-  img {float: none !important; margin: 0 !important}
+  img {float: none; margin: 0 !important}
   text-align: center; @extend .image-left;
 }
 
