@@ -35,3 +35,29 @@
 
 }
 
+@media (max-width: 360px){
+  #home-productos{
+    img{
+    float: none !important;
+    }
+  }
+  #region-staff{
+    .region-inner{
+    width:100%;
+      .item-hover-wrapper{
+      width: 210px;
+      margin-left: auto;
+      margin-right: auto;
+      }
+    }
+   }
+  #region-blog-show{
+   aside{
+   display:none;
+   }
+  }
+  .btn-back{
+  font-size: 15px;
+  margin-top: 3px;
+  }
+}

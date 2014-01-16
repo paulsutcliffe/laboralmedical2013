@@ -44,9 +44,6 @@
     @extend .col-sm-12;
     @extend .col-xs-12;
   }
-    img{
-    float: none !important;
-    }
 }
 
 #region-clientes {
@@ -109,6 +106,10 @@
     @extend .col-sm-6;
     @extend .col-xs-12;
   }
+  .region{
+  margin-left: 0;
+  margin-right: 0;
+  }
 }
 
 iframe{
@@ -122,7 +123,7 @@ iframe{
     @extend .col-lg-3;
     @extend .col-md-3;
     @extend .col-sm-3;
-    @extend .col-xs-6;
+    @extend .col-xs-8;
   }
 }
 

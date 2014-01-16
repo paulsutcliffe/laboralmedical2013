@@ -167,6 +167,10 @@ textarea {@extend .custom-border}
   h2.title, .subtitle {color: white}
 }
 
+.navbar-header{
+  width: 48px;
+  margin: 0 auto;
+}
 
 #siguenos-facebook {
   @extend .region-iframe-responsive;
@@ -198,7 +202,7 @@ textarea {@extend .custom-border}
 
 #region-staff {
   .region-inner {
-    .item-hover-wrapper {position: relative; padding: 10px 0;
+    .item-hover-wrapper {min-height: 300px; position: relative; padding: 10px 0;
       text-align: center; border: 1px solid #ccc; border-radius: 7px;
       img {@extend .img-circle; overflow: hidden; margin-bottom: 10px}
       h3, h4 {margin-bottom: 8px}
@@ -256,7 +260,13 @@ textarea {@extend .custom-border}
 #region-blog {
   @extend .gallery-list-alt
 }
-
+#region-blog-show{
+  .icon{
+    .region-inner{
+      width: 250px;
+    }
+  }
+}
 aside {
   .region-inner {
     margin-bottom: 30px !important
