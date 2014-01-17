@@ -51,7 +51,7 @@
     @extend .col-lg-3;
     @extend .col-md-3;
     @extend .col-sm-3;
-    @extend .col-xs-6;
+    @extend .col-xs-12;
   }
 }
 
@@ -132,14 +132,15 @@ iframe{
     @extend .col-lg-5;
     @extend .col-md-5;
     @extend .col-sm-5;
-    @extend .col-xs-5;
+    @extend .col-xs-12;
+    
   }
 
   .region-inner.description {
     @extend .col-lg-7;
     @extend .col-md-7;
     @extend .col-sm-7;
-    @extend .col-xs-7;
+    @extend .col-xs-12;
   }
 }
 
